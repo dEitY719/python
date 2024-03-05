@@ -1467,36 +1467,44 @@ ValueError: too many values to unpack (expected 3)
 # [7-1] 주요 built-in 함수 이해
 ############################################################
 
-print(abs(-3), abs(-3.8))
-print(pow(20, 3), pow(4, 2, 3))
+# print(abs(-3), abs(-3.8))
+# print(pow(20, 3), pow(4, 2, 3))
 
-a, b = divmod(10,3)
-print(a, b)
-print(divmod(10,3))
-print(*divmod(10,3)) #unpack argument
+# a, b = divmod(10,3)
+# print(a, b)
+# print(divmod(10,3))
+# print(*divmod(10,3)) #unpack argument
 
-print(max(1,  3.4,  5.7),   min(1, -3.4, -5.7))
-print(max([10, 3, 24, 7.5]), min('abcdABCD'), min('kim','kang'))
-# print(ord('a'), ord('A')) # 97 65
+# print(max(1,  3.4,  5.7),   min(1, -3.4, -5.7))
+# print(max([10, 3, 24, 7.5]), min('abcdABCD'), min('kim','kang'))
+# # print(ord('a'), ord('A')) # 97 65
 
-print(round(3.37), round(3.73), round(-3.37), round(-3.73))
-print(round(3.5),  round(4.5),  round(-3.5),  round(-4.5))
-print(round(1236, -2), round(1236, -1), round(3.745, 1), round(3.745, 2))
-print(round(12350, -3), round(1250.0, -2), round(1250.5, 0), round(1250.5))
+# print(round(3.37), round(3.73), round(-3.37), round(-3.73))
+# print(round(3.5),  round(4.5),  round(-3.5),  round(-4.5))
+# print(round(1236, -2), round(1236, -1), round(3.745, 1), round(3.745, 2))
+# print(round(12350, -3), round(1250.0, -2), round(1250.5, 0), round(1250.5))
 
-print(oct(100),  hex(100), bin(100))
-print(chr(0x41), ord('A'), chr(8364), ord('€'), ord('C') - ord('A'))
+# print(oct(100),  hex(100), bin(100))
+# print(chr(0x41), ord('A'), chr(8364), ord('€'), ord('C') - ord('A'))
 
 ############################################################
 # [7-2] 10진수를 2진수로
 ############################################################
-
+n = int(input())
+print(bin(n))
 
 
 ############################################################
 # [7-3] 정수들의 절대값 구하기
 ############################################################
+# argv = map(int, input().split())
 
+# res = ''
+# for x in argv:
+#     res = str(abs(x)) + ' '
+
+# print(res)
+# # print(abs(x) for x in argv)
 
 
 ############################################################

@@ -1295,44 +1295,47 @@ print(sys.getsizeof(range(100000000)))
 # [6-23] range 함수의 속성
 ############################################################
 
-a = range(1,5)
-b, c = range(2)
-d, *e, f = a
+# a = range(1,5)
+# b, c = range(2)
+# d, *e, f = a
 
-print(a[1], b, c)
-print(d, e, f)
-print(a)
-print(*a)
+# print(a[1], b, c)
+# print(d, e, f)
+# print(a)
+# print(*a)
 
-print(*range(5))
-print(*range(2,5))
-print(*range(0,6,2))
-print(*range(4,-1,-1))
+# print(*range(5))
+# print(*range(2,5))
+# print(*range(0,6,2))
+# print(*range(4,-1,-1))
 
 ############################################################
 # [6-24] 컨테이너 변환 함수 이해
 ############################################################
 
-##t1 = (1,2,3,4)
-##t2 = ((1,2,3),(4,8),(1,2,3),(6,))
-##l1 = [1,2,3,4,4,4,5]
-##l2 = [[1,2,3],[4,8],[6],[4,8]]
-##s1 = {1,2,3,3,4}
-##s2 = {(1,2,3,3,4),(4,8,9),(6,6),(4,8,9)}
-##d1 = {'a':1,'b':2,'c':3}
-##
-##a, b, c = str(3.14), str(t1), str(t2)
-##d, e    = str(l1),   str(l2)
-##f, g, h = str(s1),   str(s2), str(d1)
-##print(a, b, c, d, e, f, g, h, sep='\n')
-##print()
-##
-##x = map(tuple, (l1, l2, s1, s2, d1.items()))
-##print(*x, sep='\n')
-##print()
-##
-##x = map(list, (t1, t2, s1, s2, d1.items()))
-##print(*x, sep='\n')
+t1 = (1,2,3,4) # tuple
+t2 = ((1,2,3),(4,8),(1,2,3),(6,)) # 다중 컨테이너
+l1 = [1,2,3,4,4,4,5] # list
+l2 = [[1,2,3],[4,8],[6],[4,8]] # 다중 컨테이너
+s1 = {1,2,3,3,4} # set, `3` 중복제거 되겠군
+s2 = {(1,2,3,3,4),(4,8,9),(6,6),(4,8,9)} # tuple이 item 인 set
+d1 = {'a':1,'b':2,'c':3} # dict
+
+
+a, b, c = str(3.14), str(t1), str(t2)
+d, e    = str(l1),   str(l2)
+f, g, h = str(s1),   str(s2), str(d1)
+print(a, b, c, d, e, f, g, h, sep='\n')
+print('- '*20)
+
+
+x = map(tuple, (l1, l2, s1, s2, d1.items()))
+print(*x, sep='\n')
+print('- '*20)
+
+
+x = map(list, (t1, t2, s1, s2, d1.items()))
+print(*x, sep='\n')
 
 ############################################################
 # [6-25] set 변환 함수 이해

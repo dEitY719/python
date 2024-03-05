@@ -1555,43 +1555,45 @@ ValueError: too many values to unpack (expected 3)
 # [8-1] 컨테이너 관련 built-in 함수 이해
 ############################################################
 
-t1 = (1,2,3,4)
-t2 = ((1,2,3),(1,3),(0,))
-l1 = [1,2,3,4]
-l2 = ('kim','ko','han')
+# t1 = (1,2,3,4)
+# t2 = ((1,2,3),(1,3),(0,))
+# l1 = [1,2,3,4]
+# l2 = ('kim','ko','han')
 
-print(len(t1),len(t2),len(t2[0]),len(l1),len(l2),len(l2[0]))
-print(min(t1),max(t2),max(t2[0]),min(l1),max(l2),max(l2[0]))
-print(sum(t1),sum(t2[0]),sum(l1))
+# print(len(t1),len(t2),len(t2[0]),len(l1),len(l2),len(l2[0]))
+# print(min(t1),max(t2),max(t2[0]),min(l1),max(l2),max(l2[0]))
+# print(sum(t1),sum(t2[0]),sum(l1))
 
-# print(sum(t2)) TypeError: unsupported operand type(s) for +: 'int' and 'tuple'
-# print(sum(l2)) TypeError: unsupported operand type(s) for +: 'int' and 'str'
+# # print(sum(t2)) TypeError: unsupported operand type(s) for +: 'int' and 'tuple'
+# # print(sum(l2)) TypeError: unsupported operand type(s) for +: 'int' and 'str'
 
-s1 = sum(map(sum, t2))
-s2 = sum(t2, ())
-# s3 = sum(l2, '') TypeError: sum() can't sum strings [use ''.join(seq) instead]
-print(s1, s2) # 10 (1, 2, 3, 1, 3, 0)
-print(sum(s2))
-##
-m1 = min(map(min, t2))
-print(m1)
+# s1 = sum(map(sum, t2))
+# s2 = sum(t2, ())
+# # s3 = sum(l2, '') TypeError: sum() can't sum strings [use ''.join(seq) instead]
+# print(s1, s2) # 10 (1, 2, 3, 1, 3, 0)
+# print(sum(s2))
+# ##
+# m1 = min(map(min, t2))
+# print(m1)
 
 ############################################################
 # [8-2] dict 메서드 활용
 ############################################################
 
-##d = {'a':1,'b':3,'c':2}
-##a = d.keys()
-##b = d.values()
-##c = d.items()
-##
-##print(d, d['a'], sep = '\n')
-##print(a, b, c, sep = '\n')
-##
-##print(min(d))
-##print(max(d.keys()))
-##print(max(d.values()))
-##print(max(d.items()))
+d = {'a':1,'b':3,'c':2}
+a = d.keys()
+b = d.values()
+c = d.items()
+
+print(d, d['a'], sep = '\n')
+print(a, b, c, sep = '\n')
+print(*a, *b, *c, sep = '\n')
+
+
+print(min(d))
+print(max(d.keys()))
+print(max(d.values()))
+print(max(d.items()))
 
 ############################################################
 # [8-3] 컨테이너 정렬 함수 이해

@@ -1503,7 +1503,7 @@ ValueError: too many values to unpack (expected 3)
 ############################################################
 # [4124] G6: PY0 [LAB] 2진수를 입력하면 16진수로 인쇄하기
 ############################################################
-print(hex(int(input(), base = 2)))
+# print(hex(int(input(), base = 2)))
 
 
 ############################################################
@@ -1529,14 +1529,14 @@ print(hex(int(input(), base = 2)))
 # [7-5] eval, exec 함수
 ############################################################
 
-##print(eval('1+2'))
-##print(eval("'good ' + 'morning'"))
-##print(eval('chr(65)'))
-##print(eval('max(1,2,3)'))
-##eval('a = 3')
-##exec('a = 3')
-##eval('if a > 0 : print(a)')
-##exec('if a > 0 : print(a)')
+print(eval('1+2'))
+print(eval("'good ' + 'morning'"))
+print(eval('chr(65)'))
+print(eval('max(1,2,3)'))
+# eval('a = 3') SyntaxError: invalid syntax
+exec('a = 3')
+# eval('if a > 0 : print(a)') SyntaxError: invalid syntax
+exec('if a > 0 : print(a)')
 
 ############################################################
 # [7-6] 사칙연산 계산시 구현

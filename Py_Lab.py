@@ -1554,10 +1554,10 @@ ValueError: too many values to unpack (expected 3)
 # [4114] F2: PY0 [LAB] 알멩이들의 합
 # input >> 28 273 28 18 293 20 10 3
 ############################################################
-a, b, *res, y, z = input().split()
-# print(res)
-m = map(int, res)
-print(sum(m))
+# a, b, *res, y, z = input().split()
+# # print(res)
+# m = map(int, res)
+# print(sum(m))
 
 # sol-A
 # a, b, *c, d, e = map(int, input().split())
@@ -1566,6 +1566,15 @@ print(sum(m))
 # sol-B
 ##x = tuple(map(int, input().split()))
 ##print(sum(x[2:-2]))
+
+
+############################################################
+# [4115] F4: PY0 [LAB] 두 수 사이의 숫자들의 합
+############################################################
+a, b = map(int, input().split())
+_res = sum(range(a+1,b))
+print(_res)
+
 
 ############################################################
 # [8-1] 컨테이너 관련 built-in 함수 이해

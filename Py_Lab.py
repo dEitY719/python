@@ -1580,42 +1580,42 @@ ValueError: too many values to unpack (expected 3)
 # [8-2] dict 메서드 활용
 ############################################################
 
-d = {'a':1,'b':3,'c':2}
-a = d.keys()
-b = d.values()
-c = d.items()
+# d = {'a':1,'b':3,'c':2}
+# a = d.keys()
+# b = d.values()
+# c = d.items()
 
-print(d, d['a'], sep = '\n')
-print(a, b, c, sep = '\n')
-print(*a, *b, *c, sep = '\n')
+# print(d, d['a'], sep = '\n')
+# print(a, b, c, sep = '\n')
+# print(*a, *b, *c, sep = '\n')
 
 
-print(min(d))
-print(max(d.keys()))
-print(max(d.values()))
-print(max(d.items()))
+# print(min(d))
+# print(max(d.keys()))
+# print(max(d.values()))
+# print(max(d.items()))
 
 ############################################################
 # [8-3] 컨테이너 정렬 함수 이해
 ############################################################
 
-##t1 = (3,1,1,4)
-##t2 = ((3,2,5),(4,3),(6,))
-##l1 = [3,1,1,4]
-##l2 = [[7,2,3],[4,8],[6]]
-##s1 = {6,9,3,3,4}
-##s2 = {(8,4,3,3,5),(4,8,9),(6,4),(4,8,9)}
-##d1 = {'a':1,'b':2,'c':3}
-##
-##t3, t4 = sorted(t1), sorted(t2)
-##l3, l4 = sorted(l1, reverse = True), sorted(l2)
-##s3, s4 = sorted(s1), sorted(s2)
-##d3 = sorted(d1.items(), reverse = True)
-##
-##print(t1, t3, t4, '', sep = '\n')
-##print(l1, l3, l4, '',sep = '\n')
-##print(s1, s3, s4, '',sep = '\n')
-##print(d1, d3, sep = '\n')
+t1 = (3,1,1,4)
+t2 = ((3,2,5),(4,3),(6,))
+l1 = [3,1,1,4]
+l2 = [[7,2,3],[4,8],[6]]
+s1 = {6,9,3,3,4}
+s2 = {(8,4,3,3,5),(4,8,9),(6,4),(4,8,9)}
+d1 = {'a':1,'b':2,'c':3}
+
+t3, t4 = sorted(t1), sorted(t2)
+l3, l4 = sorted(l1, reverse = True), sorted(l2)
+s3, s4 = sorted(s1), sorted(s2)
+d3 = sorted(d1.items(), reverse = True)
+
+print(t1, t3, t4, '', sep = '\n')
+print(l1, l3, l4, '',sep = '\n')
+print(s1, s3, s4, '',sep = '\n')
+print(d1, d3, sep = '\n')
 
 ############################################################
 # [8-4] Sequence Type 메서드

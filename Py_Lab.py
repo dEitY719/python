@@ -1270,44 +1270,44 @@ ValueError: too many values to unpack (expected 3)
 # input >> park  kim  lee  moon  lew  kang  song
 ############################################################
 
-### 코드 작성
-t = input().split()
+# ### 코드 작성
+# t = input().split()
 
-# print(type(t), t)
-first, *remain, last = t
+# # print(type(t), t)
+# first, *remain, last = t
 
-print(first, last)
-print(type(remain), remain)
-r_1, *r_o = remain
-print(r_1, r_o)
+# print(first, last)
+# # print(type(remain), remain)
+# # r_1, *r_o = remain
+# # print(r_1, r_o)
 
 ############################################################
 # [6-22] range 함수
 ############################################################
+# 
+import sys
 
-##import sys
-##
-##print(range(5))
-##print(sys.getsizeof(range(100)))
-##print(sys.getsizeof(range(100000000)))
+print(range(5))
+print(sys.getsizeof(range(100)))
+print(sys.getsizeof(range(100000000)))
 
 ############################################################
 # [6-23] range 함수의 속성
 ############################################################
 
-##a = range(1,5)
-##b, c = range(2)
-##d, *e, f = a
-##
-##print(a[1], b, c)
-##print(d, e, f)
-##print(a)
-##print(*a)
-##
-##print(*range(5))
-##print(*range(2,5))
-##print(*range(0,6,2))
-##print(*range(4,-1,-1))
+a = range(1,5)
+b, c = range(2)
+d, *e, f = a
+
+print(a[1], b, c)
+print(d, e, f)
+print(a)
+print(*a)
+
+print(*range(5))
+print(*range(2,5))
+print(*range(0,6,2))
+print(*range(4,-1,-1))
 
 ############################################################
 # [6-24] 컨테이너 변환 함수 이해

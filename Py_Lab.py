@@ -1529,14 +1529,14 @@ ValueError: too many values to unpack (expected 3)
 # [7-5] eval, exec 함수
 ############################################################
 
-print(eval('1+2'))
-print(eval("'good ' + 'morning'"))
-print(eval('chr(65)'))
-print(eval('max(1,2,3)'))
-# eval('a = 3') SyntaxError: invalid syntax
-exec('a = 3')
-# eval('if a > 0 : print(a)') SyntaxError: invalid syntax
-exec('if a > 0 : print(a)')
+# print(eval('1+2'))
+# print(eval("'good ' + 'morning'"))
+# print(eval('chr(65)'))
+# print(eval('max(1,2,3)'))
+# # eval('a = 3') SyntaxError: invalid syntax
+# exec('a = 3')
+# # eval('if a > 0 : print(a)') SyntaxError: invalid syntax
+# exec('if a > 0 : print(a)')
 
 ############################################################
 # [7-6] 사칙연산 계산시 구현
@@ -1555,24 +1555,26 @@ exec('if a > 0 : print(a)')
 # [8-1] 컨테이너 관련 built-in 함수 이해
 ############################################################
 
-##t1 = (1,2,3,4)
-##t2 = ((1,2,3),(1,3),(0,))
-##l1 = [1,2,3,4]
-##l2 = ('kim','ko','han')
+t1 = (1,2,3,4)
+t2 = ((1,2,3),(1,3),(0,))
+l1 = [1,2,3,4]
+l2 = ('kim','ko','han')
+
+print(len(t1),len(t2),len(t2[0]),len(l1),len(l2),len(l2[0]))
+print(min(t1),max(t2),max(t2[0]),min(l1),max(l2),max(l2[0]))
+print(sum(t1),sum(t2[0]),sum(l1))
+
+# print(sum(t2)) TypeError: unsupported operand type(s) for +: 'int' and 'tuple'
+# print(sum(l2)) TypeError: unsupported operand type(s) for +: 'int' and 'str'
+
+s1 = sum(map(sum, t2))
+s2 = sum(t2, ())
+# s3 = sum(l2, '') TypeError: sum() can't sum strings [use ''.join(seq) instead]
+print(s1, s2) # 10 (1, 2, 3, 1, 3, 0)
+print(sum(s2))
 ##
-##print(len(t1),len(t2),len(t2[0]),len(l1),len(l2),len(l2[0]))
-##print(min(t1),max(t2),max(t2[0]),min(l1),max(l2),max(l2[0]))
-##print(sum(t1),sum(t2[0]),sum(l1))
-##
-##print(sum(t2),sum(l2))
-##
-##s1 = sum(map(sum, t2))
-##s2 = sum(t2, ())
-##s3 = sum(l2, '')
-##print(s1, s2)
-##
-##m1 = min(map(min, t2))
-##print(m1)
+m1 = min(map(min, t2))
+print(m1)
 
 ############################################################
 # [8-2] dict 메서드 활용

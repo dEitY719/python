@@ -1550,6 +1550,22 @@ ValueError: too many values to unpack (expected 3)
 ############################################################
 
 
+############################################################
+# [4114] F2: PY0 [LAB] 알멩이들의 합
+# input >> 28 273 28 18 293 20 10 3
+############################################################
+a, b, *res, y, z = input().split()
+# print(res)
+m = map(int, res)
+print(sum(m))
+
+# sol-A
+# a, b, *c, d, e = map(int, input().split())
+# print(sum(c))
+ 
+# sol-B
+##x = tuple(map(int, input().split()))
+##print(sum(x[2:-2]))
 
 ############################################################
 # [8-1] 컨테이너 관련 built-in 함수 이해
@@ -1621,16 +1637,16 @@ ValueError: too many values to unpack (expected 3)
 # [8-4] Sequence Type 메서드
 ############################################################
 
-t = (1,2,3,4,5,1,2,3)
+# t = (1,2,3,4,5,1,2,3)
 
-print(t.index(3))
-print(t.index(3,2))
-print(t.index(3,3))
-print(t.index(3,2,4))
-# print(t.index(3,3,5)) ValueError: tuple.index(x): x not in tuple
-print(t.index(3,3,100))
-print(t.count(3))
-print(t.count(9))
+# print(t.index(3))
+# print(t.index(3,2))
+# print(t.index(3,3))
+# print(t.index(3,2,4))
+# # print(t.index(3,3,5)) ValueError: tuple.index(x): x not in tuple
+# print(t.index(3,3,100))
+# print(t.count(3))
+# print(t.count(9))
 
 ############################################################
 # [8-5] 최대값 구하기

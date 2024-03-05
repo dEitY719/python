@@ -1258,11 +1258,11 @@ ValueError: too many values to unpack (expected 3)
 ############################################################
 # [4113] E7: PY0 [LAB] 과일 가격표 수정
 ############################################################
-d = {'apple' : 1000, 'banana'  : 300, 'orange' : 450}
-# 코드 작성
-fruit, n = input().split()
-d[fruit] = int(n)
-print(d)
+# d = {'apple' : 1000, 'banana'  : 300, 'orange' : 450}
+# # 코드 작성
+# fruit, n = input().split()
+# d[fruit] = int(n)
+# print(d)
 
 ############################################################
 # [6-21] 일등과 꼴찌만 기억하는 사회
@@ -1271,12 +1271,15 @@ print(d)
 ############################################################
 
 ### 코드 작성
-# t = input().split()
+t = input().split()
 
-# # print(type(t), t)
-# first, *remain, last = t
+# print(type(t), t)
+first, *remain, last = t
 
-# print(first, last)
+print(first, last)
+print(type(remain), remain)
+r_1, *r_o = remain
+print(r_1, r_o)
 
 ############################################################
 # [6-22] range 함수

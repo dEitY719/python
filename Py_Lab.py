@@ -1256,11 +1256,17 @@ ValueError: too many values to unpack (expected 3)
 
 ############################################################
 # [6-21] 일등과 꼴찌만 기억하는 사회
+# [3790] F1: PY2 [6-21] 일등과 꼴찌만 기억하는 사회
+# input >> park  kim  lee  moon  lew  kang  song
 ############################################################
 
 ### 코드 작성
-##
-##print(first, last)
+# t = input().split()
+
+# # print(type(t), t)
+# first, *remain, last = t
+
+# print(first, last)
 
 ############################################################
 # [6-22] range 함수

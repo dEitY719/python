@@ -1498,17 +1498,20 @@ ValueError: too many values to unpack (expected 3)
 # [7-3] 정수들의 절대값 구하기
 # input >> -3 2 -4 5 -17
 ############################################################
-# argv = map(int, input().split())
-# res = map(abs, argv)
-# print(*res)
+# # argv = map(int, input().split())
+# # res = map(abs, argv)
+# # print(*res)
 
-print(*map(abs, map(int, input().split())))
+# print(*map(abs, map(int, input().split())))
 
 ############################################################
 # [7-4] 키 재기
+# input >> 179.8  182.5  170.1  190.4
 ############################################################
+h = map(float, input().split())
+t = tuple(h) # 맵은 소진되므로...
 
-
+print(max(t), min(t))
 
 ############################################################
 # [7-5] eval, exec 함수

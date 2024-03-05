@@ -1285,11 +1285,11 @@ ValueError: too many values to unpack (expected 3)
 # [6-22] range 함수
 ############################################################
 # 
-import sys
+# import sys
 
-print(range(5))
-print(sys.getsizeof(range(100)))
-print(sys.getsizeof(range(100000000)))
+# print(range(5))
+# print(sys.getsizeof(range(100)))
+# print(sys.getsizeof(range(100000000)))
 
 ############################################################
 # [6-23] range 함수의 속성
@@ -1313,48 +1313,52 @@ print(sys.getsizeof(range(100000000)))
 # [6-24] 컨테이너 변환 함수 이해
 ############################################################
 
-t1 = (1,2,3,4) # tuple
-t2 = ((1,2,3),(4,8),(1,2,3),(6,)) # 다중 컨테이너
-l1 = [1,2,3,4,4,4,5] # list
-l2 = [[1,2,3],[4,8],[6],[4,8]] # 다중 컨테이너
-s1 = {1,2,3,3,4} # set, `3` 중복제거 되겠군
-s2 = {(1,2,3,3,4),(4,8,9),(6,6),(4,8,9)} # tuple이 item 인 set
-d1 = {'a':1,'b':2,'c':3} # dict
+# t1 = (1,2,3,4) # tuple
+# t2 = ((1,2,3),(4,8),(1,2,3),(6,)) # 다중 컨테이너
+# l1 = [1,2,3,4,4,4,5] # list
+# l2 = [[1,2,3],[4,8],[6],[4,8]] # 다중 컨테이너
+# s1 = {1,2,3,3,4} # set, `3` 중복제거 되겠군
+# s2 = {(1,2,3,3,4),(4,8,9),(6,6),(4,8,9)} # tuple이 item 인 set
+# d1 = {'a':1,'b':2,'c':3} # dict
 
 
-a, b, c = str(3.14), str(t1), str(t2)
-d, e    = str(l1),   str(l2)
-f, g, h = str(s1),   str(s2), str(d1)
-print(a, b, c, d, e, f, g, h, sep='\n')
-print('- '*20)
+# a, b, c = str(3.14), str(t1), str(t2)
+# d, e    = str(l1),   str(l2)
+# f, g, h = str(s1),   str(s2), str(d1)
+# print(a, b, c, d, e, f, g, h, sep='\n')
+# print('- '*20)
 
 
-x = map(tuple, (l1, l2, s1, s2, d1.items()))
-print(*x, sep='\n')
-print('- '*20)
+# x = map(tuple, (l1, l2, s1, s2, d1.items()))
+# print(*x, sep='\n')
+# print('- '*20)
 
 
-x = map(list, (t1, t2, s1, s2, d1.items()))
-print(*x, sep='\n')
+# x = map(list, (t1, t2, s1, s2, d1.items()))
+# print(*x, sep='\n')
 
 ############################################################
 # [6-25] set 변환 함수 이해
 ############################################################
 
-##t1 = (1,2,3,4)
-##t2 = ((1,2,3),(4,8),(1,2,3),(6,))
-##l1 = [1,2,3,4,4,4,5]
-##l2 = [[1,2,3],[4,8],[6],[4,8]]
-##d1 = {'a':1,'b':2,'c':3}
-##t3 = ({'a':1,'b':2}, {'c':3, 'd':4})
-##
-##s = {{1,2},{3,3,4}}
-##x = set(l2)
-##x = set(t3)
-##
-##x = map(set, (t1, t2, l1, d1.items()))
-##print(*x, sep='\n')
-##print()
+t1 = (1,2,3,4)
+t2 = ((1,2,3),(4,8),(1,2,3),(6,))
+l1 = [1,2,3,4,4,4,5]
+l2 = [[1,2,3],[4,8],[6],[4,8]]
+d1 = {'a':1,'b':2,'c':3}
+t3 = ({'a':1,'b':2}, {'c':3, 'd':4})
+
+# s = {{1,2},{3,3,4}}
+# # TypeError: unhashable type: 'set'
+# # unhashable(unique, immutable) 의미
+# x = set(l2)
+# # TypeError: unhashable type: 'list'
+# x = set(t3)
+# # TypeError: unhashable type: 'dict'
+
+x = map(set, (t1, t2, l1, d1.items()))
+print(*x, sep='\n')
+print()
 
 ############################################################
 # [6-26] dict 변환 함수 이해

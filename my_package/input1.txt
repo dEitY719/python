@@ -1,0 +1,3 @@
+10
+hello input1.txt
+100,hi,3.14

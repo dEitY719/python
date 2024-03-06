@@ -1664,19 +1664,31 @@ ValueError: too many values to unpack (expected 3)
 # print(t.count(3))
 # print(t.count(9))
 
+
+############################################################
+# [4131] H9: PY0 [LAB] 키큰 사람부터 줄 세우기
+# input >> 172.8 190 188.2 169.9 201 172.7
+############################################################
+# TODO
+argv = map(float, input().split())
+seq = list(argv)
+seq.sort(reverse=True)
+print(*seq)
+print(seq[0], seq[-1])
+
 ############################################################
 # [8-5] 최대값 구하기
 # [4057] I0: PY2 [8-5] 최대값 구하기
 # input >> 3 29 38 12 57 74 40 85 61
 ############################################################
-argv = map(int, input().split())
-seq = tuple(argv)
+# argv = map(int, input().split())
+# seq = tuple(argv)
 
-_max = max(seq)
-_loc = seq.index(_max)
+# _max = max(seq)
+# _loc = seq.index(_max)
 
-print(_max)
-print(_loc+1)
+# print(_max)
+# print(_loc+1)
 
 
 ############################################################

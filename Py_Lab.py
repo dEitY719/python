@@ -2141,17 +2141,18 @@ ValueError: too many values to unpack (expected 3)
 # [4130] H8: PY0 [LAB] 이름순 자리 배치
 # input >> kim lee park song moon ko lew lee
 ############################################################
-argv = input().split()
-print(min(argv), max(argv))
+# argv = input().split()
+# print(min(argv), max(argv))
+
 
 ############################################################
 # [12-1] 컨테이너의 slot 구조 이해
 ############################################################
 
-##l = [1,2,3,1]
-##
-##print(id(1), id(2), id(3), '', sep = '\n')
-##print(*map(id, (l, l[0], l[1], l[2], l[3])), sep = '\n')
+l = [1,2,3,1]
+
+print(id(1), id(2), id(3), '', sep = '\n')
+print(*map(id, (l, l[0], l[1], l[2], l[3])), sep = '\n')
 
 ############################################################
 # [12-2] str 컨테이너의 구조

@@ -2089,21 +2089,23 @@ ValueError: too many values to unpack (expected 3)
 # [11-4] Name resolution 동작 확인 1
 ############################################################
 
-x = max(3,4,5)
-print(x)
-max = 10
-print(max)
-print(max(5,6,7))
-# TypeError: 'int' object is not callable
-# max = 10 문장을 통해서 max의 id는 10을 ref하는 int objecct로 변경되었다!!
+# x = max(3,4,5)
+# print(x)
+# max = 10
+# print(max)
+# print(max(5,6,7))
+# # TypeError: 'int' object is not callable
+# # max = 10 문장을 통해서 max의 id는 10을 ref하는 int objecct로 변경되었다!!
 
 
 ############################################################
 # [11-5] 파이썬 Keyword 확인
 ############################################################
 
-##import keyword
-##print(keyword.kwlist)
+import keyword
+print(*keyword.kwlist)
+# print(*keyword.kwlist, sep=', ', end='\n' * 5 )
+
 
 ############################################################
 # [11-6] Name 오류

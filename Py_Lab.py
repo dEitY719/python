@@ -2191,35 +2191,35 @@ ValueError: too many values to unpack (expected 3)
 # [12-5] Mutable 컨테이너의 아이템 추가
 ############################################################
 
-l = [(1,2,3,4),{5,6},[7,8,9]]
+# l = [(1,2,3,4),{5,6},[7,8,9]]
 
-print(len(l))
-print(*l)
+# print(len(l))
+# print(*l)
 
-l.insert(1,10)
-l[2].add(20)
+# l.insert(1,10)
+# l[2].add(20)
 
-print(*l)
+# print(*l)
 
 ############################################################
 # [12-6] Container의 Multiple Binding
 ############################################################
 
-##a = [1,2,3,4]
-##b = [1,2,3,4]
-##c = a
-##print(*map(id, (a,b,c)), sep = '\n')
-##print(a == b, a == c, a is b, a is c)
-##
-##a[0] = 10
-##print(a[0], b[0], c[0])
-##print(a == b, a == c, a is b, a is c)
-##
-##d = (1,2,3,4)
-##e = (1,2,3,4)
-##f = d
-##print(*map(id, (d,e,f)), sep = '\n')
-##print(d[0], e[0], f[0], d is e, d is f)
+a = [1,2,3,4]
+b = [1,2,3,4]
+c = a
+print(*map(id, (a,b,c)), sep = '\n')
+print(a == b, a == c, a is b, a is c)
+
+a[0] = 10
+print(a[0], b[0], c[0])
+print(a == b, a == c, a is b, a is c)
+
+d = (1,2,3,4)
+e = (1,2,3,4)
+f = d
+print(*map(id, (d,e,f)), sep = '\n')
+print(d[0], e[0], f[0], d is e, d is f)
 
 ############################################################
 # [13-1] 컨테이너의 +, * 연산

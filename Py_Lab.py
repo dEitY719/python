@@ -1946,15 +1946,15 @@ ValueError: too many values to unpack (expected 3)
 # [10-1] Object 정보 확인을 위한 Built-in 함수
 ############################################################
 
-print(dir(int))
-print(dir(3))
-print(int, type(int), type(3))
-print(id(int), id(3))
-print(isinstance(3, int))
-print(isinstance(int, type))
-print(isinstance(3, type))
-a = 3
-print(a is 3, a is not 3)
+# print(dir(int))
+# print(dir(3))
+# print(int, type(int), type(3))
+# print(id(int), id(3))
+# print(isinstance(3, int))
+# print(isinstance(int, type))
+# print(isinstance(3, type))
+# a = 3
+# print(a is 3, a is not 3)
 
 ############################################################
 # [4135] K1: PY0 [LAB] 자동차 판매가격 조회
@@ -1976,17 +1976,17 @@ print(a is 3, a is not 3)
 # [10-2] Instantiation
 ############################################################
 
-##print(int.__add__(3,4))
-##x = int(3)
-##print(x.__add__(4))
-##print(int(3).__add__(4))
-##print((3).__add__(4))
-##
-##print(str.upper("Hello"))
-##x = str("Hello")
-##print(x.upper())
-##print(str("Hello").upper())
-##print("Hello".upper())
+print(int.__add__(3,4))
+x = int(3)
+print(x.__add__(4))
+print(int(3).__add__(4))
+print((3).__add__(4))
+
+print(str.upper("Hello"))
+x = str("Hello")
+print(x.upper())
+print(str("Hello").upper())
+print("Hello".upper())
 
 ############################################################
 # [10-3] 연산자 및 Built-in 함수 Overloading

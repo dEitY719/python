@@ -2102,18 +2102,19 @@ ValueError: too many values to unpack (expected 3)
 # [11-5] 파이썬 Keyword 확인
 ############################################################
 
-import keyword
-print(*keyword.kwlist)
-# print(*keyword.kwlist, sep=', ', end='\n' * 5 )
+# import keyword
+# print(*keyword.kwlist)
+# # print(*keyword.kwlist, sep=', ', end='\n' * 5 )
 
 
 ############################################################
 # [11-6] Name 오류
 ############################################################
 
-##x = y
-##a += 1
-##print(a, x)
+x = y
+# NameError: name 'y' is not defined
+a += 1
+print(a, x)
 
 ############################################################
 # [11-7] Namespace의 name 제거

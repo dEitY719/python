@@ -2205,31 +2205,32 @@ ValueError: too many values to unpack (expected 3)
 # [12-6] Container의 Multiple Binding
 ############################################################
 
-a = [1,2,3,4]
-b = [1,2,3,4]
-c = a
-print(*map(id, (a,b,c)), sep = '\n')
-print(a == b, a == c, a is b, a is c)
+# a = [1,2,3,4]
+# b = [1,2,3,4]
+# c = a
+# print(*map(id, (a,b,c)), sep = '\n')
+# print(a == b, a == c, a is b, a is c)
 
-a[0] = 10
-print(a[0], b[0], c[0])
-print(a == b, a == c, a is b, a is c)
+# a[0] = 10
+# print(a[0], b[0], c[0])
+# print(a == b, a == c, a is b, a is c)
 
-d = (1,2,3,4)
-e = (1,2,3,4)
-f = d
-print(*map(id, (d,e,f)), sep = '\n')
-print(d[0], e[0], f[0], d is e, d is f)
+# d = (1,2,3,4)
+# e = (1,2,3,4)
+# f = d
+# print(*map(id, (d,e,f)), sep = '\n')
+# print(d[0], e[0], f[0], d is e, d is f)
 
 ############################################################
 # [13-1] 컨테이너의 +, * 연산
 ############################################################
 
-##s1 = (1,2)
-##s2 = (3,4)
-##
-##print(s1 + s2, s1 * 3)
-##print('ab' + 'cd', 3 * 'ab')
+s1 = (1,2)
+s2 = (3,4)
+
+print(s1 + s2, s1 * 3)
+print('ab' + 'cd', 3 * 'ab')
+print(globals())
 
 ############################################################
 # [13-2] 다중 컨테이너의 +, * 연산

@@ -1670,11 +1670,11 @@ ValueError: too many values to unpack (expected 3)
 # input >> 172.8 190 188.2 169.9 201 172.7
 ############################################################
 # TODO
-argv = map(float, input().split())
-seq = list(argv)
-seq.sort(reverse=True)
-print(*seq)
-print(seq[0], seq[-1])
+# argv = map(float, input().split())
+# seq = list(argv)
+# seq.sort(reverse=True)
+# print(*seq)
+# print(seq[0], seq[-1])
 
 ############################################################
 # [8-5] 최대값 구하기
@@ -1690,19 +1690,30 @@ print(seq[0], seq[-1])
 # print(_max)
 # print(_loc+1)
 
+# print(_max, (_loc+1), sep='\n') # Ref.
+
 
 ############################################################
 # [8-6] 튜플로 5개 입력 받아서 인쇄하기
+# [3728] I3: PY2 [8-6] 튜플로 5개 입력 받아서 인쇄하기
+# input >> 30 50 -100 20 90
 ############################################################
-
-
+# argv = map(int, input().split())
+# t = tuple(argv)
+# print(t)
+# print(t[3])
 
 
 ############################################################
 # [8-7] 리스트로 n개 입력 받아서 최대값 구하기
+# [3729] I4: PY2 [8-7] 리스트로 n개 입력 받아서 최대값 구하기
+# input >> 30 500 -100 20 90
 ############################################################
-
-
+argv = map(int, input().split())
+l = list(argv)
+_max = max(l)
+l.append(_max)
+print(_max, l, sep='\n')
 
 
 ############################################################

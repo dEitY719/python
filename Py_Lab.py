@@ -1720,11 +1720,18 @@ ValueError: too many values to unpack (expected 3)
 # [4132] I1: PY0 [LAB] 최소 값 뒤에 등장하는 최대값의 위치
 # input >> 3 1 2 4 1 5 4 2 5 5
 ############################################################
-# argv = map(int, input().split())
-# t = tuple(argv)
-# _1st_min = min(t)
-# TODO
+argv = map(int, input().split())
+t = tuple(argv)
+_1st_min = min(t)
+_1st_min_loc = t.index(_1st_min)
+max_loc = t.index(max(t), _1st_min_loc+1)
+print(max_loc - _1st_min_loc)
 
+# # TODO
+# x = tuple(map(int, input().split()))
+# p = x.index(min(x))
+# m = x.index(max(x), p+1)
+# print(m - p)
 
 ############################################################
 # [8-8] n명 이름 중복 제거하기
@@ -1868,17 +1875,17 @@ ValueError: too many values to unpack (expected 3)
 ## [9-7] dict 형식으로 과일 tag 만들고 가격 출력하기
 ############################################################
 
-f = ('apple', 'orange', 'banana', 'mango')
-p = (100, 80, 120, 90)
+# f = ('apple', 'orange', 'banana', 'mango')
+# p = (100, 80, 120, 90)
 
-# 코드 작성
-dFmt = zip(f, p)
-tag = dict(dFmt)
+# # 코드 작성
+# dFmt = zip(f, p)
+# tag = dict(dFmt)
 
-print(tag)
+# print(tag)
 
-price = tag[input()]
-print(price)
+# price = tag[input()]
+# print(price)
 
 ############################################################
 # [9-8-1] 배열 transpose

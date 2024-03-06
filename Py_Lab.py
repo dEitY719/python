@@ -1730,17 +1730,25 @@ ValueError: too many values to unpack (expected 3)
 # [8-8] n명 이름 중복 제거하기
 # input >> kim lee kang kim song
 ############################################################
-argv = input().split()
-s = set(argv)
+# argv = input().split()
+# s = set(argv)
 
-print(len(s)) # set은 container 이므로 len 가능
+# print(len(s)) # set은 container 이므로 len 가능
 
 
 ############################################################
 # [8-9] n개 정수 입력 받아 오름차순, 내림차순으로 정렬하기
+# input >> -10 20 -40 90 200
 ############################################################
-
-
+argv = map(int, input().split())
+l = list(argv)
+# ascending = l.sort()
+# descending = l.sort(reverse=True)
+# print(ascending, descending, sep='\n')
+l.sort()
+print(l)
+l.sort(reverse=True)
+print(l)
 
 
 ############################################################

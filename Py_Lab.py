@@ -1935,11 +1935,12 @@ ValueError: too many values to unpack (expected 3)
 # [9-10] 과일 품목별 일련번호 부여하여 dict로 생성하기
 ############################################################
 
-f = ('apple', 'orange', 'banana', 'mango')
+# f = ('apple', 'orange', 'banana', 'mango')
 
-tag = dict(enumerate(f, 1))
+# tag = dict(enumerate(f, 1))
+## tag = dict(zip(range(1, len(f)+1), f))
 
-print(tag)
+# print(tag)
 
 ############################################################
 # [10-1] Object 정보 확인을 위한 Built-in 함수
@@ -1954,6 +1955,22 @@ print(tag)
 ##print(isinstance(3, type))
 ##a = 3
 ##print(a is 3, a is not 3)
+
+############################################################
+# [4135] K1: PY0 [LAB] 자동차 판매가격 조회
+# input >> 
+# K7 morning sorento carnival pride
+# 4500 1600 3200 4100 2400
+# sorento
+############################################################
+car = input().split()
+price = map(int, input().split())
+
+tag = dict(zip(car, price))
+
+argv = input()
+
+print(tag[argv])
 
 ############################################################
 # [10-2] Instantiation

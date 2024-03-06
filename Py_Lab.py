@@ -2120,21 +2120,29 @@ ValueError: too many values to unpack (expected 3)
 # [11-7] Namespace의 name 제거
 ############################################################
 
-x = max(3,4,5)
-print(x)
-max = 10
-print(max)
-del max
-print(max(5,6,7))
-
-# del x
+# x = max(3,4,5)
 # print(x)
-# # NameError: name 'x' is not defined
+# max = 10
+# print(max)
+# del max
+# print(max(5,6,7))
 
-print(min(5,6,7))
-del min
-# NameError: name 'min' is not defined
-# global namespace에서 min을 삭제하려고 하니까 에러
+# # del x
+# # print(x)
+# # # NameError: name 'x' is not defined
+
+# print(min(5,6,7))
+# del min
+# # NameError: name 'min' is not defined
+# # global namespace에서 min을 삭제하려고 하니까 에러
+
+
+############################################################
+# [4130] H8: PY0 [LAB] 이름순 자리 배치
+# input >> kim lee park song moon ko lew lee
+############################################################
+argv = input().split()
+print(min(argv), max(argv))
 
 ############################################################
 # [12-1] 컨테이너의 slot 구조 이해

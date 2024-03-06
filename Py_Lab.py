@@ -2281,8 +2281,19 @@ ValueError: too many values to unpack (expected 3)
 ############################################################
 # [4129] H7: PY0 [LAB] 자리수 맞추기
 ############################################################
-argv = input()
-print(len(argv))
+# argv = input()
+# print(len(argv))
+
+############################################################
+# [4125] G7: PY0 [LAB] 대문자를 소문자로 변환하기
+############################################################
+# print(chr(ord(input()) + ord('a') - ord('A')))
+
+char_input = input()
+# lowercase_char = chr(ord(char_input) | 32) if 'A' <= char_input <= 'Z' else char_input
+lowercase_char = chr(ord(char_input) | 32) 
+print(lowercase_char)
+
 
 ############################################################
 # [13-5] slice 함수와 slice 객체

@@ -1762,6 +1762,15 @@ ValueError: too many values to unpack (expected 3)
 # f = ('apple', 'banana', 'mango', 'pineapple', 'orange')
 # p = (1000, 800, 2000, 5200, 400)
 
+# # My mistake
+# argv = input().split()
+# # name = str(argv)
+# # print(type(name), *name)
+# _loc = f.index(*argv)
+# #     _loc = f.index(name)
+# # ValueError: tuple.index(x): x not in tuple
+# print(p[_loc])
+
 # # 코드 작성
 # # argv = input()
 # # # print(argv)
@@ -1776,18 +1785,19 @@ ValueError: too many values to unpack (expected 3)
 # [8-11] dict를 이용한 과일 가격 알려주세요
 ############################################################
 
-d = {'apple':1000, 'banana':800, 'mango':2000, 'pineapple':5200, 'orange':400}
+# d = {'apple':1000, 'banana':800, 'mango':2000, 'pineapple':5200, 'orange':400}
 
-# 코드 작성
-print(d[input()])
+# # 코드 작성
+# print(d[input()])
 
 ############################################################
 # [9-1] 실수 값들을 가까운 정수로 변환하여 인쇄
 ############################################################
 
-##f = (3.14, -5.625, 100.4, 25.8)
-##
-### 코드 작성
+f = (3.14, -5.625, 100.4, 25.8)
+
+# 코드 작성
+print(*map(round, f))
 
 ############################################################
 # [9-2] 인자 2개인 함수의 map 함수 사용

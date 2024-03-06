@@ -2057,31 +2057,33 @@ ValueError: too many values to unpack (expected 3)
 # [11-2] Name space 추적
 ############################################################
 
-a = 10
-print(id(a))
+# a = 10
+# print(id(a))
 
-a = a + 1
-b = 10
-print(a, b)
-print(id(a))
-print(id(b))
+# a = a + 1
+# b = 10
+# print(a, b)
+# print(id(a))
+# print(id(b))
 
-print(globals())
+# print(globals())
 
 ############################################################
 # [11-3] Augmented assignment
 ############################################################
 
-##a = 20
-##b = 4
-##
-##print(id(a), a)
-##a += 1
-##print(id(a), a)
-##a -= b
-##print(id(a), a)
-##a *= b + 2
-##print(id(a), a)
+a = 20
+b = 4
+
+print(id(a), a) # 20 Ref.Aaa
+a += 1
+print(id(a), a)
+a -= b
+print(id(a), a)
+a *= b + 2
+print(id(a), a)
+a -= 82
+print(id(a), a) # 20 Ref.Aaa
 
 ############################################################
 # [11-4] Name resolution 동작 확인 1

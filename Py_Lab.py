@@ -2269,14 +2269,14 @@ ValueError: too many values to unpack (expected 3)
 # [13-4] Slicing 동작의 이해
 ############################################################
 
-# a = [0, 1, 2, 3, 4, 5, 6]
-# b = a[1:3]
+a = [0, 1, 2, 3, 4, 5, 6]
+b = a[1:3]
 
-# print(a[:], a[2:], a[:5], sep ='\n')
-# print(a[1:-2], a[::2], sep ='\n')
-# print(a[::-1], a[:3:-2], sep ='\n')
-# print(a[3::-1], a[-4:-1], sep ='\n')
-# print(a[:-4:-1], b, b[1:4], sep ='\n')
+print(a[:], a[2:], a[:5], sep ='\n')
+print(a[1:-2], a[::2], sep ='\n')
+print(a[::-1], a[:3:-2], sep ='\n')
+print(a[3::-1], a[-4:-1], sep ='\n')
+print(a[:-4:-1], b, b[1:4], sep ='\n')
 
 ############################################################
 # [4129] H7: PY0 [LAB] 자리수 맞추기
@@ -2289,10 +2289,10 @@ ValueError: too many values to unpack (expected 3)
 ############################################################
 # print(chr(ord(input()) + ord('a') - ord('A')))
 
-char_input = input()
-# lowercase_char = chr(ord(char_input) | 32) if 'A' <= char_input <= 'Z' else char_input
-lowercase_char = chr(ord(char_input) | 32) 
-print(lowercase_char)
+# char_input = input()
+# # lowercase_char = chr(ord(char_input) | 32) if 'A' <= char_input <= 'Z' else char_input
+# lowercase_char = chr(ord(char_input) | 32) 
+# print(lowercase_char)
 
 
 ############################################################

@@ -1698,10 +1698,10 @@ ValueError: too many values to unpack (expected 3)
 # [3728] I3: PY2 [8-6] 튜플로 5개 입력 받아서 인쇄하기
 # input >> 30 50 -100 20 90
 ############################################################
-# argv = map(int, input().split())
-# t = tuple(argv)
-# print(t)
-# print(t[3])
+argv = map(int, input().split())
+t = tuple(argv)
+print(t)
+print(t[3])
 
 
 ############################################################
@@ -1709,11 +1709,11 @@ ValueError: too many values to unpack (expected 3)
 # [3729] I4: PY2 [8-7] 리스트로 n개 입력 받아서 최대값 구하기
 # input >> 30 500 -100 20 90
 ############################################################
-argv = map(int, input().split())
-l = list(argv)
-_max = max(l)
-l.append(_max)
-print(_max, l, sep='\n')
+# argv = map(int, input().split())
+# l = list(argv)
+# _max = max(l)
+# l.append(_max)
+# print(_max, l, sep='\n')
 
 
 ############################################################

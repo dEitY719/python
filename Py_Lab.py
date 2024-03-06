@@ -2333,61 +2333,61 @@ ValueError: too many values to unpack (expected 3)
 # [13-7] 컨테이너의 아이템 부분 갱신
 ############################################################
 
-l = [1,2]
-print(id(l), l, sep = '\n')
+# l = [1,2]
+# print(id(l), l, sep = '\n')
 
-l.append((-1,'lee'))
-l += (5,'kim')
-l.extend([7,8]) # iterable
-l.append([18,28]) # item
-print(id(l), l, sep = '\n')
+# l.append((-1,'lee'))
+# l += (5,'kim')
+# l.extend([7,8]) # iterable
+# l.append([18,28]) # item
+# print(id(l), l, sep = '\n')
 
-l[:] = [1,2,3,4]
-print(id(l), l, sep = '\n')
+# l[:] = [1,2,3,4]
+# print(id(l), l, sep = '\n')
 
-l[1:3:] = [20,30,40]
-print(id(l), l, sep = '\n')
+# l[1:3:] = [20,30,40]
+# print(id(l), l, sep = '\n')
 
-l[::2] = ('a','bc','def')
-print(id(l), l, sep = '\n')
+# l[::2] = ('a','bc','def')
+# print(id(l), l, sep = '\n')
 
-del l[1:3]
-print(id(l), l, sep = '\n')
+# del l[1:3]
+# print(id(l), l, sep = '\n')
 
-del l[:]
-print(id(l), l, sep = '\n')
+# del l[:]
+# print(id(l), l, sep = '\n')
 
-l.append('lee')
-l.extend('kim')
-print(id(l), l, sep = '\n')
+# l.append('lee')
+# l.extend('kim')
+# print(id(l), l, sep = '\n')
 
-l.reverse()
-print(id(l), l, sep = '\n')
+# l.reverse()
+# print(id(l), l, sep = '\n')
 
-x = l.copy()
-y = l[::-1]
-print(x, y, sep = '\n')
+# x = l.copy()
+# y = l[::-1]
+# print(x, y, sep = '\n')
 
-l.clear()
-print(id(l), l, sep = '\n')
+# l.clear()
+# print(id(l), l, sep = '\n')
 
 ############################################################
 # [13-8] list의 copy 메서드와 copy 모듈
 ############################################################
 
-##import copy
-##
-##l1 = [[1,2],[3,4]]
-##l2 = l1.copy()
-##l3 = copy.copy(l1)
-##l4 = copy.deepcopy(l1)
-##
-##l1[0][0] = 10
-##
-##print(id(l1[0]),l1,sep='\n')
-##print(id(l2[0]),l2,sep='\n')
-##print(id(l3[0]),l3,sep='\n')
-##print(id(l4[0]),l4,sep='\n')
+import copy
+
+l1 = [[1,2],[3,4]]
+l2 = l1.copy()
+l3 = copy.copy(l1)
+l4 = copy.deepcopy(l1)
+
+l1[0][0] = 10
+
+print(id(l1[0]),l1,sep='\n')
+print(id(l2[0]),l2,sep='\n')
+print(id(l3[0]),l3,sep='\n')
+print(id(l4[0]),l4,sep='\n')
 
 ############################################################
 # [14-1] 함수의 정의 및 호출

@@ -2072,28 +2072,31 @@ ValueError: too many values to unpack (expected 3)
 # [11-3] Augmented assignment
 ############################################################
 
-a = 20
-b = 4
+# a = 20
+# b = 4
 
-print(id(a), a) # 20 Ref.Aaa
-a += 1
-print(id(a), a)
-a -= b
-print(id(a), a)
-a *= b + 2
-print(id(a), a)
-a -= 82
-print(id(a), a) # 20 Ref.Aaa
+# print(id(a), a) # 20 Ref.Aaa
+# a += 1
+# print(id(a), a)
+# a -= b
+# print(id(a), a)
+# a *= b + 2
+# print(id(a), a)
+# a -= 82
+# print(id(a), a) # 20 Ref.Aaa
 
 ############################################################
 # [11-4] Name resolution 동작 확인 1
 ############################################################
 
-##x = max(3,4,5)
-##print(x)
-##max = 10
-##print(max)
-##print(max(5,6,7))
+x = max(3,4,5)
+print(x)
+max = 10
+print(max)
+print(max(5,6,7))
+# TypeError: 'int' object is not callable
+# max = 10 문장을 통해서 max의 id는 10을 ref하는 int objecct로 변경되었다!!
+
 
 ############################################################
 # [11-5] 파이썬 Keyword 확인

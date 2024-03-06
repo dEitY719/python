@@ -1946,15 +1946,15 @@ ValueError: too many values to unpack (expected 3)
 # [10-1] Object 정보 확인을 위한 Built-in 함수
 ############################################################
 
-##print(dir(int))
-##print(dir(3))
-##print(int, type(int), type(3))
-##print(id(int), id(3))
-##print(isinstance(3, int))
-##print(isinstance(int, type))
-##print(isinstance(3, type))
-##a = 3
-##print(a is 3, a is not 3)
+print(dir(int))
+print(dir(3))
+print(int, type(int), type(3))
+print(id(int), id(3))
+print(isinstance(3, int))
+print(isinstance(int, type))
+print(isinstance(3, type))
+a = 3
+print(a is 3, a is not 3)
 
 ############################################################
 # [4135] K1: PY0 [LAB] 자동차 판매가격 조회
@@ -1963,14 +1963,14 @@ ValueError: too many values to unpack (expected 3)
 # 4500 1600 3200 4100 2400
 # sorento
 ############################################################
-car = input().split()
-price = map(int, input().split())
+# car = input().split()
+# price = map(int, input().split())
 
-tag = dict(zip(car, price))
+# tag = dict(zip(car, price))
 
-argv = input()
+# argv = input()
 
-print(tag[argv])
+# print(tag[argv])
 
 ############################################################
 # [10-2] Instantiation

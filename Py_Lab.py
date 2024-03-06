@@ -1858,23 +1858,27 @@ ValueError: too many values to unpack (expected 3)
 # print(len(x) - x.index(m) - x.count(m))
  
 # 최적화된 코드
-x = map(float, input().split())
-m = float(input())
-x = sorted(x, reverse = True)
-print(x.index(m))
+# x = map(float, input().split())
+# m = float(input())
+# x = sorted(x, reverse = True)
+# print(x.index(m))
 
 
 ############################################################
 ## [9-7] dict 형식으로 과일 tag 만들고 가격 출력하기
 ############################################################
 
-# f = ('apple', 'orange', 'banana', 'mango')
-# p = (100, 80, 120, 90)
+f = ('apple', 'orange', 'banana', 'mango')
+p = (100, 80, 120, 90)
 
-# # 코드 작성
+# 코드 작성
+dFmt = zip(f, p)
+tag = dict(dFmt)
 
-# print(tag)
-# print(price)
+print(tag)
+
+price = tag[input()]
+print(price)
 
 ############################################################
 # [9-8-1] 배열 transpose

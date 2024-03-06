@@ -1740,33 +1740,45 @@ ValueError: too many values to unpack (expected 3)
 # [8-9] n개 정수 입력 받아 오름차순, 내림차순으로 정렬하기
 # input >> -10 20 -40 90 200
 ############################################################
-argv = map(int, input().split())
-l = list(argv)
-# ascending = l.sort()
-# descending = l.sort(reverse=True)
-# print(ascending, descending, sep='\n')
-l.sort()
-print(l)
-l.sort(reverse=True)
-print(l)
+# argv = map(int, input().split())
+# l = list(argv)
+
+# # # ascending = l.sort()
+# # # descending = l.sort(reverse=True)
+# # # print(ascending, descending, sep='\n')
+
+# # l.sort()
+# # print(l)
+# # l.sort(reverse=True)
+# # print(l)
+
+# print(sorted(l), sorted(l, reverse=True), sep='\n') # Ref.
 
 
 ############################################################
 # [8-10] 과일 가격을 알려주세요
 ############################################################
 
-##f = ('apple', 'banana', 'mango', 'pineapple', 'orange')
-##p = (1000, 800, 2000, 5200, 400)
-##
-### 코드 작성
+f = ('apple', 'banana', 'mango', 'pineapple', 'orange')
+p = (1000, 800, 2000, 5200, 400)
+
+# 코드 작성
+# argv = input()
+# # print(argv)
+# # print(f)
+# _loc = f.index(argv)
+# print(p[_loc])
+
+print(p[f.index(input())])
+
 
 ############################################################
 # [8-11] dict를 이용한 과일 가격 알려주세요
 ############################################################
 
-##d = {'apple':1000, 'banana':800, 'mango':2000, 'pineapple':5200, 'orange':400}
-##
-### 코드 작성
+#d = {'apple':1000, 'banana':800, 'mango':2000, 'pineapple':5200, 'orange':400}
+#
+## 코드 작성
 
 ############################################################
 # [9-1] 실수 값들을 가까운 정수로 변환하여 인쇄

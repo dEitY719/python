@@ -1992,35 +1992,43 @@ ValueError: too many values to unpack (expected 3)
 # [10-3] 연산자 및 Built-in 함수 Overloading
 ############################################################
 
-a = 1 + 2
-b = 'x' + 'y'
-c = 3.4 - 2.5
+# a = 1 + 2
+# b = 'x' + 'y'
+# c = 3.4 - 2.5
 
-d = abs(-10)
-e = abs(-3.8)
-f = round(1234, -2)
-g = round(10.434, 1)
+# d = abs(-10)
+# e = abs(-3.8)
+# f = round(1234, -2)
+# g = round(10.434, 1)
 
-print(a,b,c,d,e,f,g, sep='\n')
-print('- ' * 20)
-a = int.__add__(1, 2)
-b = str.__add__('x', 'y')
-c = float.__sub__(3.4, 2.5)
+# print(a,b,c,d,e,f,g, sep='\n')
+# print('- ' * 20)
+# a = int.__add__(1, 2)
+# b = str.__add__('x', 'y')
+# c = float.__sub__(3.4, 2.5)
 
-d = int.__abs__(-10)
-e = float.__abs__(-3.8)
-f = int.__round__(1234, -2)
-g = float.__round__(10.434, 1)
+# d = int.__abs__(-10)
+# e = float.__abs__(-3.8)
+# f = int.__round__(1234, -2)
+# g = float.__round__(10.434, 1)
 
-print(a,b,c,d,e,f,g, sep='\n')
+# print(a,b,c,d,e,f,g, sep='\n')
 
 ############################################################
 # [11-1] Name binding
 ############################################################
 
-##a = 2020
-##b = 2020
-##print(id(2020), id(a), id(b))
+a = 2020
+b = 2020
+print(id(2020), id(a), id(b), sep='\n')
+print('- ' * 20)
+
+lst =[1, 2, 1, 2]
+print(id(lst[0]), id(lst[1]), id(lst[2]), id(lst[3]), sep='\n')
+print('- ' * 20)
+
+lst[3] = 3
+print(id(lst[0]), id(lst[1]), id(lst[2]), id(lst[3]), sep='\n')
 
 ############################################################
 # [11-2] Name space 추적

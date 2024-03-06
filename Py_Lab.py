@@ -1976,43 +1976,43 @@ ValueError: too many values to unpack (expected 3)
 # [10-2] Instantiation
 ############################################################
 
-print(int.__add__(3,4))
-x = int(3)
-print(x.__add__(4))
-print(int(3).__add__(4))
-print((3).__add__(4))
+# print(int.__add__(3,4))
+# x = int(3)
+# print(x.__add__(4))
+# print(int(3).__add__(4))
+# print((3).__add__(4))
 
-print(str.upper("Hello"))
-x = str("Hello")
-print(x.upper())
-print(str("Hello").upper())
-print("Hello".upper())
+# print(str.upper("Hello"))
+# x = str("Hello")
+# print(x.upper())
+# print(str("Hello").upper())
+# print("Hello".upper())
 
 ############################################################
 # [10-3] 연산자 및 Built-in 함수 Overloading
 ############################################################
 
-##a = 1 + 2
-##b = 'x' + 'y'
-##c = 3.4 - 2.5
-##
-##d = abs(-10)
-##e = abs(-3.8)
-##f = round(1234, -2)
-##g = round(10.434, 1)
-##
-##print(a,b,c,d,e,f,g, sep='\n')
-##
-##a = int.__add__(1, 2)
-##b = str.__add__('x', 'y')
-##c = float.__sub__(3.4, 2.5)
-##
-##d = int.__abs__(-10)
-##e = float.__abs__(-3.8)
-##f = int.__round__(1234, -2)
-##g = float.__round__(10.434, 1)
-##
-##print(a,b,c,d,e,f,g, sep='\n')
+a = 1 + 2
+b = 'x' + 'y'
+c = 3.4 - 2.5
+
+d = abs(-10)
+e = abs(-3.8)
+f = round(1234, -2)
+g = round(10.434, 1)
+
+print(a,b,c,d,e,f,g, sep='\n')
+print('- ' * 20)
+a = int.__add__(1, 2)
+b = str.__add__('x', 'y')
+c = float.__sub__(3.4, 2.5)
+
+d = int.__abs__(-10)
+e = float.__abs__(-3.8)
+f = int.__round__(1234, -2)
+g = float.__round__(10.434, 1)
+
+print(a,b,c,d,e,f,g, sep='\n')
 
 ############################################################
 # [11-1] Name binding

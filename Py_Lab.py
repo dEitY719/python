@@ -1921,25 +1921,25 @@ ValueError: too many values to unpack (expected 3)
 # [9-9] enumerate 함수 분석
 ############################################################
 
-t = ('kim', 'lee', 'park')
+# t = ('kim', 'lee', 'park')
 
-x1 = zip(range(len(t)), t)
-x2 = enumerate(t)
-x3 = enumerate(t, 10)
+# x1 = zip(range(len(t)), t)
+# x2 = enumerate(t)
+# x3 = enumerate(t, 10)
 
-print(*x1)
-print(*x2)
-print(*x3)
+# print(*x1)
+# print(*x2)
+# print(*x3)
 
 ############################################################
 # [9-10] 과일 품목별 일련번호 부여하여 dict로 생성하기
 ############################################################
 
-##f = ('apple', 'orange', 'banana', 'mango')
-##
-##tag = # 코드 작성
-##
-##print(tag)
+f = ('apple', 'orange', 'banana', 'mango')
+
+tag = dict(enumerate(f, 1))
+
+print(tag)
 
 ############################################################
 # [10-1] Object 정보 확인을 위한 Built-in 함수

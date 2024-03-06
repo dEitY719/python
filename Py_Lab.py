@@ -1738,9 +1738,9 @@ ValueError: too many values to unpack (expected 3)
 # [4133] I2: PY0 [LAB] 찾는 단어수 세기
 # input >> hello python hello willtek hello korea hello everyone hello
 ############################################################
-sentence = input()
-findWord = input()
-print(sentence.count(findWord))
+# sentence = input()
+# findWord = input()
+# print(sentence.count(findWord))
 
 ############################################################
 # [8-8] n명 이름 중복 제거하기
@@ -1900,11 +1900,12 @@ print(sentence.count(findWord))
 # [9-8-1] 배열 transpose
 ############################################################
 
-##m = ((1,2,3,4),(5,6,7,8),(9,10,11,12))
-##
-##t = # 코드 작성
-##
-##print(type(t), t)
+m = ((1,2,3,4),(5,6,7,8),(9,10,11,12))
+
+z = zip(m[0], m[1], m[2])
+t = tuple(z)
+
+print(type(t), t)
 
 ############################################################
 # [9-8-2] 배열 transpose => 코드 개선

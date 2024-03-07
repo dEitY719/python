@@ -3412,32 +3412,32 @@ ValueError: too many values to unpack (expected 3)
 # [18-1-1] 사용자 함수
 ############################################################
 
-##a = 10
-##
-##def f1() : print(1)
-##def f2() : print(a + 1)
-##def f3(x, y) : print(max(x, y))
-##def f4(x, y) : return x + y
-##
-##f1()
-##f2()
-##f3(5, 10)
-##print(f4(5, 10))
+a = 10
+
+def f1() : print(1)
+def f2() : print(a + 1)
+def f3(x, y) : print(max(x, y))
+def f4(x, y) : return x + y
+
+f1()
+f2()
+f3(5, 10)
+print(f4(5, 10))
 
 ############################################################
 # [18-1-2] Lambda 식으로 이름없는 함수 만들기
 ############################################################
 
-a = 10
-l1 = lambda : print(1)
-l2 = lambda : print(a + 1)
-l3 = lambda x, y : print(max(x, y))
-l4 = lambda x, y : x + y
+# a = 10
+# l1 = lambda : print(1)
+# l2 = lambda : print(a + 1)
+# l3 = lambda x, y : print(max(x, y))
+# l4 = lambda x, y : x + y
 
-l1()
-l2()
-l3(5, 10)
-print(l4(5, 10))
+# l1()
+# l2()
+# l3(5, 10)
+# print(l4(5, 10))
 
 ############################################################
 # [18-2] Lambda 함수 동작 분석

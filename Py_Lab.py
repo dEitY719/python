@@ -2821,25 +2821,26 @@ ValueError: too many values to unpack (expected 3)
 # [14-16] 함수들간 Namespace 해석
 ############################################################
 
-a = 1
-b = 2
-c = 3
+# a = 1
+# b = 2
+# c = 3
 
-def f1() :
-   global b
-   b = 20
-   c = 30
-   print('[1]', a, b, c)
+# def f1() :
+#    global b
+#    b = 20
+#    c = 30
 
-def f2() :
-   b = 300
-   c = 400
-   print('[2]', a, b, c)
+#    print('[1]', a, b, c)
 
-print('[3]', a, b, c)
-f1()
-f2()
-print('[4]', a, b, c)
+# def f2() :
+#    b = 300
+#    c = 400
+#    print('[2]', a, b, c)
+
+# print('[3]', a, b, c)
+# f1()
+# f2()
+# print('[4]', a, b, c)
 
 ############################################################
 # [14-17] 컨테이너의 unpack argument 전달
@@ -2914,15 +2915,17 @@ print('[4]', a, b, c)
 # [15-1] Position or Keyword Parameter(pPK)
 ############################################################
 
-##def func(a, b): 			#pPK, pPK
-##    print('%d, %d' %(a, b))
-##
-##func(10, 20)            		#aP, aP
-##func(a = 10, b = 20)    		#aK, aK
-##func(b = 10, a = 20)    		#aK, aK
-##func(10, b = 20)        		#aP, aK
-##func(a = 10, 20)       		#aK, aP
-##func(20, a = 10)       		#aP, aK
+def func(a, b): 			#pPK, pPK
+   print('%d, %d' %(a, b))
+
+func(10, 20)            		#aP, aP
+func(a = 10, b = 20)    		#aK, aK
+func(b = 10, a = 20)    		#aK, aK
+func(10, b = 20)        		#aP, aK
+# func(a = 10, 20)       		#aK, aP
+# SyntaxError: positional argument follows keyword argument
+func(20, a = 10)       		#aP, aK
+# TypeError: func() got multiple values for argument 'a'
 
 ############################################################
 # [15-2] Default pPK Parameter(pPKd) 1

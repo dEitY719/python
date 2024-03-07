@@ -2968,21 +2968,21 @@ ValueError: too many values to unpack (expected 3)
 # [15-5] Keyword Only Parameter(pK, pKd) 2
 ############################################################
 
-def func(a, b = 200, *, c, d = 400, e): 	 #pPK, pPKd, pK, pKd, pK
-   print('%d, %d, %d, %d, %d' %(a, b, c, d, e))
+# def func(a, b = 200, *, c, d = 400, e): 	 #pPK, pPKd, pK, pKd, pK
+#    print('%d, %d, %d, %d, %d' %(a, b, c, d, e))
 
-func(10, 20, c = 30, d = 40, e = 50)     	#aP, aP, aK, aK, aK
-func(10, e = 50, c = 30)                	#aP, (aKd), aK, (aKd), aK
-func(e = 50, c = 30, a = 10)            	#aK, (aKd), aK, (aKd), aK
+# func(10, 20, c = 30, d = 40, e = 50)     	#aP, aP, aK, aK, aK
+# func(10, e = 50, c = 30)                	#aP, (aKd), aK, (aKd), aK
+# func(e = 50, c = 30, a = 10)            	#aK, (aKd), aK, (aKd), aK
 
 ############################################################
 # [15-6] pPKd 사용 예
 ############################################################
 
-##print(round(10.5))
-##print(round(number = 10.123, ndigits = 2))
-##print(round(ndigits = -2, number = 1234))
-##print(round(10.123, 2))
+print(round(10.5))
+print(round(number = 10.123, ndigits = 2))
+print(round(ndigits = -2, number = 1234))
+print(round(10.123, 2))
 
 ############################################################
 # [15-7] pKd 사용 예

@@ -2915,31 +2915,31 @@ ValueError: too many values to unpack (expected 3)
 # [15-1] Position or Keyword Parameter(pPK)
 ############################################################
 
-def func(a, b): 			#pPK, pPK
-   print('%d, %d' %(a, b))
+# def func(a, b): 			#pPK, pPK
+#    print('%d, %d' %(a, b))
 
-func(10, 20)            		#aP, aP
-func(a = 10, b = 20)    		#aK, aK
-func(b = 10, a = 20)    		#aK, aK
-func(10, b = 20)        		#aP, aK
-# func(a = 10, 20)       		#aK, aP
-# SyntaxError: positional argument follows keyword argument
-func(20, a = 10)       		#aP, aK
-# TypeError: func() got multiple values for argument 'a'
+# func(10, 20)            		#aP, aP
+# func(a = 10, b = 20)    		#aK, aK
+# func(b = 10, a = 20)    		#aK, aK
+# func(10, b = 20)        		#aP, aK
+# # func(a = 10, 20)       		#aK, aP
+# # SyntaxError: positional argument follows keyword argument
+# func(20, a = 10)       		#aP, aK
+# # TypeError: func() got multiple values for argument 'a'
 
 ############################################################
 # [15-2] Default pPK Parameter(pPKd) 1
 ############################################################
 
-##def func(a, b, c = 300, d = 400): 	    #pPK, pPK, pPKd, pPKd
-##    print('%d, %d, %d, %d' %(a, b, c, d))
-##
-##func(10, 20)                              #aP, aP, (aKd), (aKd)
-##func(10, 20, 30)                          #aP, aP, aP, (aKd)
-##func(a = 10, b = 20)                      #aK, aK, (aKd), (aKd)
-##func(a = 10, b = 20, c = 30, d = 40)      #aK, aK, aK, aK
-##func(a = 10, b = 20, d = 40)              #aK, aK, (aKd), aK
-##func(10, 20, d = 40)                      #aP, aP, (aKd), aK
+def func(a, b, c = 300, d = 400): 	    #pPK, pPK, pPKd, pPKd
+   print('%d, %d, %d, %d' %(a, b, c, d))
+
+func(10, 20)                              #aP, aP, (aKd), (aKd)
+func(10, 20, 30)                          #aP, aP, aP, (aKd)
+func(a = 10, b = 20)                      #aK, aK, (aKd), (aKd)
+func(a = 10, b = 20, c = 30, d = 40)      #aK, aK, aK, aK
+func(a = 10, b = 20, d = 40)              #aK, aK, (aKd), aK
+func(10, 20, d = 40)                      #aP, aP, (aKd), aK
 
 ############################################################
 # [15-3] Default pPK Parameter(pPKd) 2

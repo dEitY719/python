@@ -3168,17 +3168,17 @@ ValueError: too many values to unpack (expected 3)
 # [16-8] 난수 발생 함수 import
 ############################################################
 
-import random
+# import random
 
-print(random.randrange(10))
-print(random.randrange(-100,101))
-print(random.randrange(0,101,2))
-print(random.random())
-print(random.sample(range(1,50), 3))
-print(random.sample(range(0,100,2), 3))
-print(random.sample(range(-50,50), 10))
-print(random.sample({1,2,3,4,5,6}, 3))
-print(random.sample({1.2, 3.14, -5.45, 9.2}, 2))
+# print(random.randrange(10))
+# print(random.randrange(-100,101))
+# print(random.randrange(0,101,2))
+# print(random.random())
+# print(random.sample(range(1,50), 3))
+# print(random.sample(range(0,100,2), 3))
+# print(random.sample(range(-50,50), 10))
+# print(random.sample({1,2,3,4,5,6}, 3))
+# print(random.sample({1.2, 3.14, -5.45, 9.2}, 2))
 
 ############################################################
 # [16-9] 가위, 바위, 보 게임
@@ -3193,18 +3193,18 @@ print(random.sample({1.2, 3.14, -5.45, 9.2}, 2))
 # [17-1] 조건식과 거짓 조건
 ############################################################
 
-##def func():
-##    return
-##
-##print( "T" if 0 else "F")
-##print( "T" if 0.0 else "F")
-##print( "T" if False else "F")
-##print( "T" if None else "F")
-##print( "T" if () else "F")
-##print( "T" if [] else "F")
-##print( "T" if {} else "F")
-##print( "T" if '' else "F")
-##print( "T" if func() else "F")
+def func():
+   return
+
+print( "T" if 0 else "F")
+print( "T" if 0.0 else "F")
+print( "T" if False else "F")
+print( "T" if None else "F")
+print( "T" if () else "F")
+print( "T" if [] else "F")
+print( "T" if {} else "F")
+print( "T" if '' else "F")
+print( "T" if func() else "F")
 
 ############################################################
 # [17-2] 조건식과 참 조건

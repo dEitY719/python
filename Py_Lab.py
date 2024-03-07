@@ -2417,38 +2417,39 @@ ValueError: too many values to unpack (expected 3)
 # [14-2] 함수의 리턴
 ############################################################
 
-print('start')
+# print('start')
 
-def func1() :
-   print('func1-1')
-   return
-   print('func1-2')
-   return None
-   print('func1-3')
+# def func1() :
+#    print('func1-1')
+#    return
+#    print('func1-2')
+#    return None
+#    print('func1-3')
 
-func1()
-print(func1())
+# func1()
+# print(func1())
 
-print('stop')
+# print('stop')
 
 ############################################################
 # [14-3] 함수의 Parameter
 ############################################################
 
-##def func1(a) :
-##    print('func1', a)
-##
-##def func2(a, b) :
-##    c = a + b
-##    print('func2', a, b, c)
-##
-##func1(10)
-##func1('kim')
-##
-##func2(30, 40)
-##func2('kim', 'lew')
-##func2([1,2,3], [4,5,6])
-##func2('kim', 10)
+def func1(a) :
+   print('func1', a)
+
+def func2(a, b) :
+   c = a + b
+   print('func2', a, b, c)
+
+func1(10)
+func1('kim')
+
+func2(30, 40)
+func2('kim', 'lew')
+func2([1,2,3], [4,5,6])
+func2('kim', 10)
+# TypeError: can only concatenate str (not "int") to str
 
 ############################################################
 # [14-4] 함수의 값 Return

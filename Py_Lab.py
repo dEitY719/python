@@ -2534,11 +2534,11 @@ ValueError: too many values to unpack (expected 3)
 # dislike like
 ###############################################################
 # '''
-l = input().split()
-o, n = input().split()
-p = l.index(o)
-l[p] = n
-print(*l)
+# l = input().split()
+# o, n = input().split()
+# p = l.index(o)
+# l[p] = n
+# print(*l)
 # '''
  
 # s = input()
@@ -2546,6 +2546,16 @@ print(*l)
 # p = s.index(o)
 # print(s[:p]+n+s[p+len(o):])
  
+
+############################################################
+# [4140] L3: PY0 [LAB] 자리 뒤집기
+# input >> kim,lee,moon,lew,kim,kang,song,min
+############################################################
+l = input().split(sep=',')
+
+l.reverse()
+
+print(*l, sep='-')
 
 ############################################################
 # [14-8] 1등과 꼴찌한 학생 번호는?

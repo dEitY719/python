@@ -2591,29 +2591,30 @@ ValueError: too many values to unpack (expected 3)
 # [14-9-1] 함수의 parameter에 argument의 전달
 ############################################################
 
-def f2(x) :
-   x[0] = 100
-   x.append(200)
-   print(x)
+# def f2(x) :
+#    x[0] = 100
+#    x.append(200)
+#    print(x)
 
-b = [1,2,3,4]
+# b = [1,2,3,4]
 
-f2(b)
-print(b)
+# f2(b)
+# print(b)
 
 ############################################################
 # [14-10-1] 함수의 변수 사용 1
 ############################################################
 
-# cnt = 0
+cnt = 0
 
-# def func() :
-#     cnt += 1
+def func() :
+    cnt += 1
+# UnboundLocalError: local variable 'cnt' referenced before assignment
 
-# func()
-# func()
+func()
+func()
 
-# print(cnt)
+print(cnt)
 
 ############################################################
 # [14-10-2] 함수의 변수 사용 2

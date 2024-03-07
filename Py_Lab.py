@@ -3408,14 +3408,24 @@ ValueError: too many values to unpack (expected 3)
 # print(any(x)) # 1 .. 023 소진!
 # print(*x)
 
+############################################################
+# [3746] B3: PY2 [17-8] 3의 배수 또는 7의 배수 판단
+############################################################
+argv = int(input())
+# if( argv%3 == 0 or argv%7 == 0):
+#     print('YES')
+# else:
+#     print('NO')
+
+print('YES' if ( argv%3 == 0 or argv%7 == 0)  else 'NO' )
 
 ############################################################
 # [4179] B7: PY0 [LAB] ZERO or PASS
 # input >> 0 0 0 0 0 0
 ############################################################
-argv = map(int, input().split())
-existTrue = any(argv)
-print('PASS' if (existTrue) else 'ZERO')
+# argv = map(int, input().split())
+# existTrue = any(argv)
+# print('PASS' if (existTrue) else 'ZERO')
 
 ############################################################
 # [18-1-1] 사용자 함수

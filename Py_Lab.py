@@ -3383,21 +3383,21 @@ ValueError: too many values to unpack (expected 3)
 # [17-12] 연산자 우선순위 정리
 ############################################################
 
-a, b = 10, 5
-# print(a == not b)
-# SyntaxError: invalid syntax
-print(not(a % 3 and a % 5))
-print(a % 3 == 0 or a % 5 != 1)
-print('even') if a % 2 == 0 else print('odd')
+# a, b = 10, 5
+# # print(a == not b)
+# # SyntaxError: invalid syntax
+# print(not(a % 3 and a % 5))
+# print(a % 3 == 0 or a % 5 != 1)
+# print('even') if a % 2 == 0 else print('odd')
 
 ############################################################
 # [17-13] all 함수와 any 함수 1
 ############################################################
 
-##print(all([True, 1, -1, 1.0, 'str']), all(([],)), all([]))
-##print(all({True, None, -1, 1.0, 'str'}), any([()]), any([]))
-##print(any([True, None, 0, 0.0, '']))
-##print(any((False, None, 0, 0.0, '')))
+print(all([True, 1, -1, 1.0, 'str']), all(([],)), all([]))
+print(all({True, None, -1, 1.0, 'str'}), any([()]), any([]))
+print(any([True, None, 0, 0.0, '']))
+print(any((False, None, 0, 0.0, '')))
 
 ############################################################
 # [17-14] all 함수와 any 함수 2

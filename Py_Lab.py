@@ -3193,27 +3193,27 @@ ValueError: too many values to unpack (expected 3)
 # [17-1] 조건식과 거짓 조건
 ############################################################
 
-def func():
-   return
+# def func():
+#    return
 
-print( "T" if 0 else "F")
-print( "T" if 0.0 else "F")
-print( "T" if False else "F")
-print( "T" if None else "F")
-print( "T" if () else "F")
-print( "T" if [] else "F")
-print( "T" if {} else "F")
-print( "T" if '' else "F")
-print( "T" if func() else "F")
+# print( "T" if 0 else "F")
+# print( "T" if 0.0 else "F")
+# print( "T" if False else "F")
+# print( "T" if None else "F")
+# print( "T" if () else "F")
+# print( "T" if [] else "F")
+# print( "T" if {} else "F")
+# print( "T" if '' else "F")
+# print( "T" if func() else "F")
 
 ############################################################
 # [17-2] 조건식과 참 조건
 ############################################################
 
-##print( "T" if -1 else "F")
-##print( "T" if '0' else "F")
-##print( "T" if (0,) else "F")
-##print( "T" if [1] else "F")
+print( "T" if -1 else "F")
+print( "T" if '0' else "F")
+print( "T" if (0,) else "F")
+print( "T" if [1] else "F")
 
 ############################################################
 # [17-3] 짝수, 홀수 판단 함수

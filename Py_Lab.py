@@ -3103,25 +3103,25 @@ ValueError: too many values to unpack (expected 3)
 # [16-3] 패키지 import
 ############################################################
 
-import my_package.my_module as mm
-print(mm.add(3,4), mm.sub(3,4))
+# import my_package.my_module as mm
+# print(mm.add(3,4), mm.sub(3,4))
 
-from my_package import my_module as mm
-print(mm.add(3,4), mm.sub(3,4))
+# from my_package import my_module as mm
+# print(mm.add(3,4), mm.sub(3,4))
 
-from my_package.my_module import add, sub
-print(add(3,4), sub(3,4))
+# from my_package.my_module import add, sub
+# print(add(3,4), sub(3,4))
 
-from my_package.my_module import *
-print(add(3,4), sub(3,4))
+# from my_package.my_module import *
+# print(add(3,4), sub(3,4))
 
-import sys
-sys.path.append(r'.\my_package\files')
+# import sys
+# sys.path.append(r'.\my_package\files')
 
-import my_module2 as mm2
-sys.path.pop()
+# import my_module2 as mm2
+# sys.path.pop()
 
-print(mm2.add(3,4), mm2.sub(3,4))
+# print(mm2.add(3,4), mm2.sub(3,4))
 
 ############################################################
 # [16-4] import의 주의사항 2
@@ -3168,17 +3168,17 @@ print(mm2.add(3,4), mm2.sub(3,4))
 # [16-8] 난수 발생 함수 import
 ############################################################
 
-##import random
-##
-##print(random.randrange(10))
-##print(random.randrange(-100,101))
-##print(random.randrange(0,101,2))
-##print(random.random())
-##print(random.sample(range(1,50), 3))
-##print(random.sample(range(0,100,2), 3))
-##print(random.sample(range(-50,50), 10))
-##print(random.sample({1,2,3,4,5,6}, 3))
-##print(random.sample({1.2, 3.14, -5.45, 9.2}, 2))
+import random
+
+print(random.randrange(10))
+print(random.randrange(-100,101))
+print(random.randrange(0,101,2))
+print(random.random())
+print(random.sample(range(1,50), 3))
+print(random.sample(range(0,100,2), 3))
+print(random.sample(range(-50,50), 10))
+print(random.sample({1,2,3,4,5,6}, 3))
+print(random.sample({1.2, 3.14, -5.45, 9.2}, 2))
 
 ############################################################
 # [16-9] 가위, 바위, 보 게임

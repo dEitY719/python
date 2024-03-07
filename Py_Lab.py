@@ -2463,23 +2463,23 @@ ValueError: too many values to unpack (expected 3)
 # [14-4] 함수의 값 Return
 ############################################################
 
-def func(a) :
-   print(a)
-   return a + 1
+# def func(a) :
+#    print(a)
+#    return a + 1
 
-func(10)
-x = func(20)
-print(x)
-print(func(30))
+# func(10)
+# x = func(20)
+# print(x)
+# print(func(30))
 
 ############################################################
 # [14-5] return 식이 여럿인 함수
 ############################################################
 
-##def func(a, b) :
-##    return a + b, a - b, a *  b, a // b
-##
-##print(func(10, 3))
+def func(a, b) :
+   return a + b, a - b, a *  b, a // b
+
+print(func(10, 3))
 
 ############################################################
 # [14-2] argument의 전달

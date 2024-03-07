@@ -3394,19 +3394,19 @@ ValueError: too many values to unpack (expected 3)
 # [17-13] all 함수와 any 함수 1
 ############################################################
 
-print(all([True, 1, -1, 1.0, 'str']), all(([],)), all([]))
-print(all({True, None, -1, 1.0, 'str'}), any([()]), any([]))
-print(any([True, None, 0, 0.0, '']))
-print(any((False, None, 0, 0.0, '')))
+# print(all([True, 1, -1, 1.0, 'str']), all(([],)), all([]))
+# print(all({True, None, -1, 1.0, 'str'}), any([()]), any([]))
+# print(any([True, None, 0, 0.0, '']))
+# print(any((False, None, 0, 0.0, '')))
 
 ############################################################
 # [17-14] all 함수와 any 함수 2
 ############################################################
 
-##x = map(int, '1901023')
-##print(all(x))
-##print(any(x))
-##print(*x)
+x = map(int, '1901023')
+print(all(x)) # 190 .. 1023 소진!
+print(any(x)) # 1 .. 023 소진!
+print(*x)
 
 ############################################################
 # [18-1-1] 사용자 함수

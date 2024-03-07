@@ -2945,23 +2945,24 @@ ValueError: too many values to unpack (expected 3)
 # [15-3] Default pPK Parameter(pPKd) 2
 ############################################################
 
-def func(a, b = 200, c): 		  #pPK, pPKd, pPK
-   print('%d, %d, %d' %(a, b, c))
+# def func(a, b = 200, c): 		  #pPK, pPKd, pPK
+#    print('%d, %d, %d' %(a, b, c))
 
-func(10, 20, 30)         		  #aP, aP, aP
-# SyntaxError: non-default argument follows default argument
+# func(10, 20, 30)         		  #aP, aP, aP
+# # SyntaxError: non-default argument follows default argument
 
 ############################################################
 # [15-4] Keyword Only Parameter(pK, pKd) 1
 ############################################################
 
-##def func(*, a, b = 200, c): 	    #pK, pKd, pK
-##    print('%d, %d, %d' %(a, b, c))
-##
-##func(a = 10, b = 20, c = 30) 	    #aK, aK, aK
-##func(c = 30, b = 20, a = 10) 	    #aK, aK, aK
-##func(a = 10, c = 30)         	    #aK, aK
-##func(10, 20, 30)            	    #ap, ap, ap
+def func(*, a, b = 200, c): 	    #pK, pKd, pK
+   print('%d, %d, %d' %(a, b, c))
+
+func(a = 10, b = 20, c = 30) 	    #aK, aK, aK
+func(c = 30, b = 20, a = 10) 	    #aK, aK, aK
+func(a = 10, c = 30)         	    #aK, aK
+func(10, 20, 30)            	    #ap, ap, ap
+# TypeError: func() takes 0 positional arguments but 3 were given        
 
 ############################################################
 # [15-5] Keyword Only Parameter(pK, pKd) 2

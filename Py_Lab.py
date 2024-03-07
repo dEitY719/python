@@ -3067,37 +3067,37 @@ ValueError: too many values to unpack (expected 3)
 # [16-1] 모듈 import
 ############################################################
 
-def add(a, b):
-	return 'add?'
+# def add(a, b):
+# 	return 'add?'
 
-import my_module
-print(add(3,4), my_module.add(3,4), my_module.sub(3,4))
+# import my_module
+# print(add(3,4), my_module.add(3,4), my_module.sub(3,4))
 
-import my_module as mm
-print(mm.add(3,4), mm.sub(3,4))
+# import my_module as mm
+# print(mm.add(3,4), mm.sub(3,4))
 
-import my_module as mm, your_module as ym
-print(mm.add(3,4), mm.sub(3,4))
-print(ym.mul(3,4), ym.div(3,4), ym.mod(3,4))
+# import my_module as mm, your_module as ym
+# print(mm.add(3,4), mm.sub(3,4))
+# print(ym.mul(3,4), ym.div(3,4), ym.mod(3,4))
 
 ############################################################
 # [16-2] 모듈의 특정 이름(name) import
 ############################################################
 
-##def add(a, b):
-##    return 'add?'
-##
-##import my_module as mm
-##from my_module import add
-##
-##print(add(3,4))
-##print(mm.add(3,4), mm.sub(3,4))
+def add(a, b):
+   return 'add?'
 
-##from my_module import add, sub
-##print(add(3,4), sub(3,4))
+import my_module as mm
+from my_module import add
 
-##from my_module import *
-##print(add(3,4), sub(3,4))
+print(add(3,4))
+print(mm.add(3,4), mm.sub(3,4))
+
+from my_module import add, sub
+print(add(3,4), sub(3,4))
+
+from my_module import *
+print(add(3,4), sub(3,4))
 
 ############################################################
 # [16-3] 패키지 import

@@ -2551,11 +2551,11 @@ ValueError: too many values to unpack (expected 3)
 # [4140] L3: PY0 [LAB] 자리 뒤집기
 # input >> kim,lee,moon,lew,kim,kang,song,min
 ############################################################
-l = input().split(sep=',')
+# l = input().split(sep=',')
 
-l.reverse()
+# l.reverse()
 
-print(*l, sep='-')
+# print(*l, sep='-')
 
 ############################################################
 # [14-8] 1등과 꼴찌한 학생 번호는?
@@ -2578,14 +2578,14 @@ print(*l, sep='-')
 # [14-9-1] 함수의 parameter에 argument의 전달
 ############################################################
 
-##def f1(a) :
-##    a = 100
-##    print(a)
-##
-##a = 10
-##
-##f1(a)
-##print(a)
+def f1(a) :
+   a = 100
+   print(a)
+
+a = 10
+
+f1(a)
+print(a)
 
 ############################################################
 # [14-9-1] 함수의 parameter에 argument의 전달

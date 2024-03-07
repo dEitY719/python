@@ -3255,13 +3255,13 @@ ValueError: too many values to unpack (expected 3)
 # [17-5] 우리 반 학생인가?
 ############################################################
 
-def student_check(t, s) :
-   # 코드 작성
-    return 'YES' if s in t else 'NO'
+# def student_check(t, s) :
+#    # 코드 작성
+#     return 'YES' if s in t else 'NO'
 
-t = ('kim', 'lee', 'park', 'kang', 'song', 'lew', 'moon')
-s = input()
-print(student_check(t, s))
+# t = ('kim', 'lee', 'park', 'kang', 'song', 'lew', 'moon')
+# s = input()
+# print(student_check(t, s))
 
 ############################################################
 # [17-6] 나는 몇 조인가?
@@ -3274,12 +3274,12 @@ print(student_check(t, s))
 # [17-7] 논리 연산자
 ############################################################
 
-##print(True and False)
-##print(True or False)
-##print({} and True)
-##print(False or 100)
-##print((11 % 2) and (20 % 3))
-##print(not (10 % 2))
+print(True and False)
+print(True or False)
+print({} and True)
+print(False or 100)
+print((11 % 2) and (20 % 3))
+print(not (10 % 2))
 
 ############################################################
 # [17-8] 3의 배수 또는 7의 배수 판단

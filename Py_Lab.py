@@ -3408,6 +3408,15 @@ ValueError: too many values to unpack (expected 3)
 # print(any(x)) # 1 .. 023 소진!
 # print(*x)
 
+
+############################################################
+# [4179] B7: PY0 [LAB] ZERO or PASS
+# input >> 0 0 0 0 0 0
+############################################################
+argv = map(int, input().split())
+existTrue = any(argv)
+print('PASS' if (existTrue) else 'ZERO')
+
 ############################################################
 # [18-1-1] 사용자 함수
 ############################################################
@@ -3443,14 +3452,14 @@ ValueError: too many values to unpack (expected 3)
 # [18-2] Lambda 함수 동작 분석
 ############################################################
 
-def sqr(x) :
-   return x ** 2
+# def sqr(x) :
+#    return x ** 2
 
-y = map(sqr, [1,3,4,7])
-print(*y)
+# y = map(sqr, [1,3,4,7])
+# print(*y)
 
-z = map(lambda x : x ** 2, [1,3,4,7])
-print(*z)
+# z = map(lambda x : x ** 2, [1,3,4,7])
+# print(*z)
 
 ############################################################
 # [18-3] tuple로 리턴되는 함수를 lambda 식으로 설계

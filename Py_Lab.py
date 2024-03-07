@@ -2659,22 +2659,22 @@ ValueError: too many values to unpack (expected 3)
 ############################################################
 # [14-11] global 키워드
 ############################################################
-def f1() :
-   print(a+1)   # global a는 읽기 가능
+# def f1() :
+#    print(a+1)   # global a는 읽기 가능
 
-def f2( ):
-   global a
-   global b
-   a = 10
-   b = 20   # global b는 쓰기 가능
-   c = 30 + d
-   print(a, b, c)
+# def f2( ):
+#    global a
+#    global b
+#    a = 10
+#    b = 20   # global b는 쓰기 가능
+#    c = 30 + d
+#    print(a, b, c)
 
-a, c, d = 1, 3, 5
-print(f'global {a}')
-f1()
-f2()
-print(a, b, c) # f2에서 globla b를 이미 namespace에 등록
+# a, c, d = 1, 3, 5
+# print(f'global {a}')
+# f1()
+# f2()
+# print(a, b, c) # f2에서 globla b를 이미 namespace에 등록
 
 ############################################################
 # [14-12] nonlocal 키워드
@@ -2821,25 +2821,25 @@ print(a, b, c) # f2에서 globla b를 이미 namespace에 등록
 # [14-16] 함수들간 Namespace 해석
 ############################################################
 
-##a = 1
-##b = 2
-##c = 3
-##
-##def f1() :
-##    global b
-##    b = 20
-##    c = 30
-##    print('[1]', a, b, c)
-##
-##def f2() :
-##    b = 300
-##    c = 400
-##    print('[2]', a, b, c)
-##
-##print('[3]', a, b, c)
-##f1()
-##f2()
-##print('[4]', a, b, c)
+a = 1
+b = 2
+c = 3
+
+def f1() :
+   global b
+   b = 20
+   c = 30
+   print('[1]', a, b, c)
+
+def f2() :
+   b = 300
+   c = 400
+   print('[2]', a, b, c)
+
+print('[3]', a, b, c)
+f1()
+f2()
+print('[4]', a, b, c)
 
 ############################################################
 # [14-17] 컨테이너의 unpack argument 전달

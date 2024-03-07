@@ -2620,16 +2620,27 @@ ValueError: too many values to unpack (expected 3)
 # [14-10-2] 함수의 변수 사용 2
 ############################################################
 
-a = 1
+# a = 1
 
-def func() :
-   b = a
-#    UnboundLocalError: local variable 'a' referenced before assignment     
-   a = 0
-   print(b)
+# def func() :
+#    b = a
+# #    UnboundLocalError: local variable 'a' referenced before assignment     
+#    a = 0
+#    print(b)
 
-func()
-print(a)
+# func()
+# print(a)
+
+
+############################################################
+# [4171] L7: PY0 [LAB] 팀 확인 함수
+########################################################
+def check_team(id) :
+    # 코드 작성
+    return id % 10
+
+n = int(input())
+print(check_team(n))
 
 ############################################################
 # [14-11] global 키워드

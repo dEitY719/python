@@ -2979,10 +2979,10 @@ ValueError: too many values to unpack (expected 3)
 # [15-6] pPKd 사용 예
 ############################################################
 
-print(round(10.5))
-print(round(number = 10.123, ndigits = 2))
-print(round(ndigits = -2, number = 1234))
-print(round(10.123, 2))
+# print(round(10.5))
+# print(round(number = 10.123, ndigits = 2))
+# print(round(ndigits = -2, number = 1234))
+# print(round(10.123, 2))
 
 ############################################################
 # [15-7] pKd 사용 예
@@ -3067,18 +3067,18 @@ print(round(10.123, 2))
 # [16-1] 모듈 import
 ############################################################
 
-##def add(a, b):
-##	return 'add?'
-##
-##import my_module
-##print(add(3,4), my_module.add(3,4), my_module.sub(3,4))
+def add(a, b):
+	return 'add?'
 
-##import my_module as mm
-##print(mm.add(3,4), mm.sub(3,4))
+import my_module
+print(add(3,4), my_module.add(3,4), my_module.sub(3,4))
 
-##import my_module as mm, your_module as ym
-##print(mm.add(3,4), mm.sub(3,4))
-##print(ym.mul(3,4), ym.div(3,4))
+import my_module as mm
+print(mm.add(3,4), mm.sub(3,4))
+
+import my_module as mm, your_module as ym
+print(mm.add(3,4), mm.sub(3,4))
+print(ym.mul(3,4), ym.div(3,4), ym.mod(3,4))
 
 ############################################################
 # [16-2] 모듈의 특정 이름(name) import

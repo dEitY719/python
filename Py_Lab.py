@@ -2647,31 +2647,34 @@ ValueError: too many values to unpack (expected 3)
 # input >> 1 3 56 89 23 40 23 45 80 40 9 1 3
 # 3 과 일치하는 것의 개수는?
 #################################
-def find_gem(box, gem) :
-    # 코드 작성
-    return tuple(box).count(gem)
+# def find_gem(box, gem) :
+#     # 코드 작성
+#     return tuple(box).count(gem)
 
-n = map(int, input().split())
-x = int(input())
-print(find_gem(n, x))
+# n = map(int, input().split())
+# x = int(input())
+# print(find_gem(n, x))
 
 
 ############################################################
 # [14-11] global 키워드
 ############################################################
+def f1() :
+   print(a+1)   # global a는 읽기 가능
 
-##def f2( ):
-##    global a
-##    global b
-##    a = 10
-##    b = 20
-##    c = 30 + d
-##    print(a, b, c)
-##
-##a, c, d = 1, 3, 5
-##print(a)
-##f2()
-##print(a, b, c)
+def f2( ):
+   global a
+   global b
+   a = 10
+   b = 20   # global b는 쓰기 가능
+   c = 30 + d
+   print(a, b, c)
+
+a, c, d = 1, 3, 5
+print(f'global {a}')
+f1()
+f2()
+print(a, b, c) # f2에서 globla b를 이미 namespace에 등록
 
 ############################################################
 # [14-12] nonlocal 키워드

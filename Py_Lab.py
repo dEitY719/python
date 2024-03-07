@@ -2635,12 +2635,26 @@ ValueError: too many values to unpack (expected 3)
 ############################################################
 # [4171] L7: PY0 [LAB] 팀 확인 함수
 ########################################################
-def check_team(id) :
-    # 코드 작성
-    return id % 10
+# def check_team(id) :
+#     # 코드 작성
+#     return id % 10
 
-n = int(input())
-print(check_team(n))
+# n = int(input())
+# print(check_team(n))
+
+############################################################
+# [4172] L8: PY0 [LAB] 보석의 개수는?
+# input >> 1 3 56 89 23 40 23 45 80 40 9 1 3
+# 3 과 일치하는 것의 개수는?
+#################################
+def find_gem(box, gem) :
+    # 코드 작성
+    return tuple(box).count(gem)
+
+n = map(int, input().split())
+x = int(input())
+print(find_gem(n, x))
+
 
 ############################################################
 # [14-11] global 키워드

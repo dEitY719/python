@@ -2393,43 +2393,43 @@ ValueError: too many values to unpack (expected 3)
 # [14-1] 함수의 정의 및 호출
 ############################################################
 
-def func1() : print('func1')
+# def func1() : print('func1')
 
-def func2() :
-   print('func2')
+# def func2() :
+#    print('func2')
 
-def func3() :
-   print('func3-1')
-   print('func3-2')
+# def func3() :
+#    print('func3-1')
+#    print('func3-2')
 
-func1()
+# func1()
 
-def func4() :
-   print('func4-1')
-   return
-   print('func4-2')
+# def func4() :
+#    print('func4-1')
+#    return
+#    print('func4-2')
 
-func2()
-func3()
-func4()
+# func2()
+# func3()
+# func4()
 
 ############################################################
 # [14-2] 함수의 리턴
 ############################################################
 
-##print('start')
-##
-##def func1() :
-##    print('func1-1')
-##    return
-##    print('func1-2')
-##    return None
-##    print('func1-3')
-##
-##func1()
-##print(func1())
-##
-##print('stop')
+print('start')
+
+def func1() :
+   print('func1-1')
+   return
+   print('func1-2')
+   return None
+   print('func1-3')
+
+func1()
+print(func1())
+
+print('stop')
 
 ############################################################
 # [14-3] 함수의 Parameter

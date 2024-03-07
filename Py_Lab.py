@@ -3084,44 +3084,44 @@ ValueError: too many values to unpack (expected 3)
 # [16-2] 모듈의 특정 이름(name) import
 ############################################################
 
-def add(a, b):
-   return 'add?'
+# def add(a, b):
+#    return 'add?'
 
-import my_module as mm
-from my_module import add
+# import my_module as mm
+# from my_module import add
 
-print(add(3,4))
-print(mm.add(3,4), mm.sub(3,4))
+# print(add(3,4))
+# print(mm.add(3,4), mm.sub(3,4))
 
-from my_module import add, sub
-print(add(3,4), sub(3,4))
+# from my_module import add, sub
+# print(add(3,4), sub(3,4))
 
-from my_module import *
-print(add(3,4), sub(3,4))
+# from my_module import *
+# print(add(3,4), sub(3,4))
 
 ############################################################
 # [16-3] 패키지 import
 ############################################################
 
-##import my_package.my_module as mm
-##print(mm.add(3,4), mm.sub(3,4))
-##
-##from my_package import my_module as mm
-##print(mm.add(3,4), mm.sub(3,4))
-##
-##from my_package.my_module import add, sub
-##print(add(3,4), sub(3,4))
-##
-##from my_package.my_module import *
-##print(add(3,4), sub(3,4))
-##
-##import sys
-##sys.path.append(r'.\my_package\files')
-##
-##import my_module2 as mm2
-##sys.path.pop()
-##
-##print(mm2.add(3,4), mm2.sub(3,4))
+import my_package.my_module as mm
+print(mm.add(3,4), mm.sub(3,4))
+
+from my_package import my_module as mm
+print(mm.add(3,4), mm.sub(3,4))
+
+from my_package.my_module import add, sub
+print(add(3,4), sub(3,4))
+
+from my_package.my_module import *
+print(add(3,4), sub(3,4))
+
+import sys
+sys.path.append(r'.\my_package\files')
+
+import my_module2 as mm2
+sys.path.pop()
+
+print(mm2.add(3,4), mm2.sub(3,4))
 
 ############################################################
 # [16-4] import의 주의사항 2

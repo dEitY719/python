@@ -2476,26 +2476,26 @@ ValueError: too many values to unpack (expected 3)
 # [14-5] return 식이 여럿인 함수
 ############################################################
 
-def func(a, b) :
-   return a + b, a - b, a *  b, a // b
+# def func(a, b) :
+#    return a + b, a - b, a *  b, a // b
 
-print(func(10, 3))
+# print(func(10, 3))
 
 ############################################################
-# [14-2] argument의 전달
+# [14-6] argument의 전달
 ############################################################
 
-##def func(a, b):
-##    c = a - b
-##    return c
-##
-##a, b = 10, 4
-##
-##print( func(10, 4) )
-##print( func(a, b) )
-##print( func(b, a) )
-##print( func(a + 10, b + 20) )
-##print( func( func(10, 4), func(a + 10, b + 20) ) )
+def func(a, b):
+   c = a - b
+   return c
+
+a, b = 10, 4
+
+print( func(10, 4) )
+print( func(a, b) )
+print( func(b, a) )
+print( func(a + 10, b + 20) )
+print( func( func(10, 4), func(a + 10, b + 20) ) )
 
 ############################################################
 # [14-7] 문자열 복제기

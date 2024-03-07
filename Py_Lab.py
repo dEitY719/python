@@ -2435,42 +2435,42 @@ ValueError: too many values to unpack (expected 3)
 # [14-3] 함수의 Parameter
 ############################################################
 
-def func1(a) :
-   print('func1', a, sep=' ..>.. ')
+# def func1(a) :
+#    print('func1', a, sep=' ..>.. ')
 
-def func2(a, b) :
-   c = a + b
-   print('func2', a, b, c, sep=' ..>>.. ')
+# def func2(a, b) :
+#    c = a + b
+#    print('func2', a, b, c, sep=' ..>>.. ')
 
-func1(10)
-func1('kim')
+# func1(10)
+# func1('kim')
 
-func2(30, 40)
-func2('kim', 'lew')
-func2([1,2,3], [4,5,6])
+# func2(30, 40)
+# func2('kim', 'lew')
+# func2([1,2,3], [4,5,6])
 
-l = [1,2,3]
-l1 = l.append([4,5,6]) # append's return is None
-print(l, l1)
-l.extend([4,5,6])
-l2 = l
-print('extend >> ', l2)
+# l = [1,2,3]
+# l1 = l.append([4,5,6]) # append's return is None
+# print(l, l1)
+# l.extend([4,5,6])
+# l2 = l
+# print('extend >> ', l2)
 
-func2('kim', 10)
-# TypeError: can only concatenate str (not "int") to str
+# func2('kim', 10)
+# # TypeError: can only concatenate str (not "int") to str
 
 ############################################################
 # [14-4] 함수의 값 Return
 ############################################################
 
-##def func(a) :
-##    print(a)
-##    return a + 1
-##
-##func(10)
-##x = func(20)
-##print(x)
-##print(func(30))
+def func(a) :
+   print(a)
+   return a + 1
+
+func(10)
+x = func(20)
+print(x)
+print(func(30))
 
 ############################################################
 # [14-5] return 식이 여럿인 함수

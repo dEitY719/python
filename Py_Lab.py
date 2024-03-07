@@ -3359,35 +3359,36 @@ ValueError: too many values to unpack (expected 3)
 # [17-11] Short circuit 원리
 ############################################################
 
-def fTrue():
-   print('fTrue')
-   return True
+# def fTrue():
+#    print('fTrue')
+#    return True
 
-def fFalse():
-   print('fFalse')
-   return False
+# def fFalse():
+#    print('fFalse')
+#    return False
 
-print(fTrue() and fFalse())
-print('- '*10)
-print(fFalse() or fTrue())
-print('- '*10)
+# print(fTrue() and fFalse())
+# print('- '*10)
+# print(fFalse() or fTrue())
+# print('- '*10)
 
-print(fFalse() and fTrue())
-print('- '*10)
+# print(fFalse() and fTrue())
+# print('- '*10)
 
-print(fTrue() or fFalse())
-print('- '*10)
+# print(fTrue() or fFalse())
+# print('- '*10)
 
 
 ############################################################
 # [17-12] 연산자 우선순위 정리
 ############################################################
 
-##a, b = 10, 5
-##print(a == not b)
-##print(not(a % 3 and a % 5))
-##print(a % 3 == 0 or a % 5 != 1)
-##print('even') if a % 2 == 0 else print('odd')
+a, b = 10, 5
+# print(a == not b)
+# SyntaxError: invalid syntax
+print(not(a % 3 and a % 5))
+print(a % 3 == 0 or a % 5 != 1)
+print('even') if a % 2 == 0 else print('odd')
 
 ############################################################
 # [17-13] all 함수와 any 함수 1

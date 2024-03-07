@@ -2501,33 +2501,33 @@ ValueError: too many values to unpack (expected 3)
 # [14-7] 문자열 복제기
 ############################################################
 
-# def string_repeat(s, n) :
+def string_repeat(s, n) :
 
-#    # 코드 작성
-#    x = s * n
+   # 코드 작성
+   x = s * n
 
-#    return x
+   return x
 
-# y = string_repeat('kim', 2)
-# print(y)
-# print(string_repeat('hello', 3))
+y = string_repeat('kim', 2)
+print(y)
+print(string_repeat('hello', 3))
 
 ############################################################
 # [14-8] 1등과 꼴찌한 학생 번호는?
 # input >> 10 20 30 50 15 70 5 60 21
 ############################################################
 
-def score_find(t) :
+# def score_find(t) :
 
-   # 코드 작성
-    _max = max(t)
-    _min = min(t)
-    _max_idx = t.index(_max)
-    _min_idx = t.index(_min)
-    return _max_idx + 1, _min_idx + 1
+#    # 코드 작성
+#     _max = max(t)
+#     _min = min(t)
+#     _max_idx = t.index(_max)
+#     _min_idx = t.index(_min)
+#     return _max_idx + 1, _min_idx + 1
 
-score = tuple(map(int, input().split()))
-print(score_find(score))
+# score = tuple(map(int, input().split()))
+# print(score_find(score))
 
 ############################################################
 # [14-9-1] 함수의 parameter에 argument의 전달

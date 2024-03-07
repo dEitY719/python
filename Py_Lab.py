@@ -3328,50 +3328,56 @@ ValueError: too many values to unpack (expected 3)
 # [17-10] 학점 계산 프로그램 개선
 ############################################################
 
-def func(n):
-    grade = ''
-    grade_F = 'F'*60
-    grade_D = 'D'*10
-    grade_C = 'C'*10
-    grade_B = 'B'*10
-    grade_A = 'A'*11
-    grade = grade_F + grade_D + grade_C + grade_B + grade_A
-    # print(grade, len(grade), n, sep=',')
-    return grade[n]
-
-n = int(input())
-
-#코드 작성
-if n < 0 or n > 100:
-    print('ERROR')
-else:
-    print(func(n))
-
-# # Other solution
 # def func(n):
-#     s = 'FFFFFFDCBAA'
-#     return s[n//10]
- 
+#     grade = ''
+#     grade_F = 'F'*60
+#     grade_D = 'D'*10
+#     grade_C = 'C'*10
+#     grade_B = 'B'*10
+#     grade_A = 'A'*11
+#     grade = grade_F + grade_D + grade_C + grade_B + grade_A
+#     # print(grade, len(grade), n, sep=',')
+#     return grade[n]
+
 # n = int(input())
-# print(func(n) if 0 <= n <= 100 else 'ERROR')
+
+# #코드 작성
+# if n < 0 or n > 100:
+#     print('ERROR')
+# else:
+#     print(func(n))
+
+# # # Other solution
+# # def func(n):
+# #     s = 'FFFFFFDCBAA'
+# #     return s[n//10]
+ 
+# # n = int(input())
+# # print(func(n) if 0 <= n <= 100 else 'ERROR')
 
 ############################################################
 # [17-11] Short circuit 원리
 ############################################################
 
-##def fTrue():
-##    print('fTrue')
-##    return True
-##
-##def fFalse():
-##    print('fFalse')
-##    return False
-##
-##print(fTrue() and fFalse())
-##print(fFalse() or fTrue())
-##
-##print(fFalse() and fTrue())
-##print(fTrue() or fFalse())
+def fTrue():
+   print('fTrue')
+   return True
+
+def fFalse():
+   print('fFalse')
+   return False
+
+print(fTrue() and fFalse())
+print('- '*10)
+print(fFalse() or fTrue())
+print('- '*10)
+
+print(fFalse() and fTrue())
+print('- '*10)
+
+print(fTrue() or fFalse())
+print('- '*10)
+
 
 ############################################################
 # [17-12] 연산자 우선순위 정리

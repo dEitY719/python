@@ -3293,48 +3293,67 @@ ValueError: too many values to unpack (expected 3)
 # [17-9] 학점을 알려주세요
 ############################################################
 
-def func(n):
-    if n >= 90:
-        x = 'A'
-    elif n >= 80:
-        x = 'B'
-    elif n >= 70:
-        x = 'C'
-    elif n >= 60:
-        x = 'D'
-    else:
-        x = 'F'
-   # 코드 작성
-    return x
+# def func(n):
+#     if n >= 90:
+#         x = 'A'
+#     elif n >= 80:
+#         x = 'B'
+#     elif n >= 70:
+#         x = 'C'
+#     elif n >= 60:
+#         x = 'D'
+#     else:
+#         x = 'F'
+#    # 코드 작성
+#     return x
 
-n = int(input())
+# n = int(input())
 
-#코드 작성
-if n < 0 or n > 100:
-    print('ERROR')
-else:
-    print(func(n))
+# #코드 작성
+# if n < 0 or n > 100:
+#     print('ERROR')
+# else:
+#     print(func(n))
 
-# # By chatGPT - babo chatGPT
-# def calculate_grade(score):
-#     grade_labels = ['F', 'F', 'F', 'F', 'F', 'F', 'D', 'C', 'B', 'A', 'A']
-#     return next((grade for boundary, grade in zip(range(0, 101, 10), grade_labels) if score >= boundary), 'ERROR')
+# # # By chatGPT - babo chatGPT
+# # def calculate_grade(score):
+# #     grade_labels = ['F', 'F', 'F', 'F', 'F', 'F', 'D', 'C', 'B', 'A', 'A']
+# #     return next((grade for boundary, grade in zip(range(0, 101, 10), grade_labels) if score >= boundary), 'ERROR')
 
-# n = int(input("Enter the score: "))
-# print(calculate_grade(n))
+# # n = int(input("Enter the score: "))
+# # print(calculate_grade(n))
 
 
 ############################################################
 # [17-10] 학점 계산 프로그램 개선
 ############################################################
 
-##def func(n):
-##
-##    # 코드 작성
-##
-##n = int(input())
-##
-###코드 작성
+# def func(n):
+#     grade = ''
+#     grade_F = 'F'*59
+#     grade_D = 'D'*10
+#     grade_C = 'C'*10
+#     grade_B = 'B'*10
+#     grade_A = 'A'*12
+#     grade = grade_F + grade_D + grade_C + grade_B + grade_A
+# # 코드 작성
+#     return grade[n]
+
+# n = int(input())
+
+# #코드 작성
+# if n < 0 or n > 100:
+#     print('ERROR')
+# else:
+#     print(func(n))
+
+# Other solution
+def func(n):
+    s = 'FFFFFFDCBAA'
+    return s[n//10]
+ 
+n = int(input())
+print(func(n) if 0 <= n <= 100 else 'ERROR')
 
 ############################################################
 # [17-11] Short circuit 원리

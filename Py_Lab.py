@@ -2375,43 +2375,43 @@ ValueError: too many values to unpack (expected 3)
 # [13-8] list의 copy 메서드와 copy 모듈
 ############################################################
 
-import copy
+# import copy
 
-l1 = [[1,2],[3,4]]
-l2 = l1.copy()
-l3 = copy.copy(l1)
-l4 = copy.deepcopy(l1)
+# l1 = [[1,2],[3,4]]
+# l2 = l1.copy()
+# l3 = copy.copy(l1)
+# l4 = copy.deepcopy(l1)
 
-l1[0][0] = 10
+# l1[0][0] = 10
 
-print(id(l1[0]),l1,sep='\n')
-print(id(l2[0]),l2,sep='\n')
-print(id(l3[0]),l3,sep='\n')
-print(id(l4[0]),l4,sep='\n')
+# print(id(l1[0]),l1,sep='\n')
+# print(id(l2[0]),l2,sep='\n')
+# print(id(l3[0]),l3,sep='\n')
+# print(id(l4[0]),l4,sep='\n')
 
 ############################################################
 # [14-1] 함수의 정의 및 호출
 ############################################################
 
-##def func1() : print('func1')
-##
-##def func2() :
-##    print('func2')
-##
-##def func3() :
-##    print('func3-1')
-##    print('func3-2')
-##
-##func1()
-##
-##def func4() :
-##    print('func4-1')
-##    return
-##    print('func4-2')
-##
-##func2()
-##func3()
-##func4()
+def func1() : print('func1')
+
+def func2() :
+   print('func2')
+
+def func3() :
+   print('func3-1')
+   print('func3-2')
+
+func1()
+
+def func4() :
+   print('func4-1')
+   return
+   print('func4-2')
+
+func2()
+func3()
+func4()
 
 ############################################################
 # [14-2] 함수의 리턴

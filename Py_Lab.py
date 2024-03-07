@@ -3274,12 +3274,12 @@ ValueError: too many values to unpack (expected 3)
 # [17-7] 논리 연산자
 ############################################################
 
-print(True and False)
-print(True or False)
-print({} and True)
-print(False or 100)
-print((11 % 2) and (20 % 3))
-print(not (10 % 2))
+# print(True and False)
+# print(True or False)
+# print({} and True)
+# print(False or 100)
+# print((11 % 2) and (20 % 3))
+# print(not (10 % 2))
 
 ############################################################
 # [17-8] 3의 배수 또는 7의 배수 판단
@@ -3293,13 +3293,36 @@ print(not (10 % 2))
 # [17-9] 학점을 알려주세요
 ############################################################
 
-##def func(n):
-##
-##    # 코드 작성
-##
-##n = int(input())
-##
-###코드 작성
+def func(n):
+    if n >= 90:
+        x = 'A'
+    elif n >= 80:
+        x = 'B'
+    elif n >= 70:
+        x = 'C'
+    elif n >= 60:
+        x = 'D'
+    else:
+        x = 'F'
+   # 코드 작성
+    return x
+
+n = int(input())
+
+#코드 작성
+if n < 0 or n > 100:
+    print('ERROR')
+else:
+    print(func(n))
+
+# # By chatGPT - babo chatGPT
+# def calculate_grade(score):
+#     grade_labels = ['F', 'F', 'F', 'F', 'F', 'F', 'D', 'C', 'B', 'A', 'A']
+#     return next((grade for boundary, grade in zip(range(0, 101, 10), grade_labels) if score >= boundary), 'ERROR')
+
+# n = int(input("Enter the score: "))
+# print(calculate_grade(n))
+
 
 ############################################################
 # [17-10] 학점 계산 프로그램 개선

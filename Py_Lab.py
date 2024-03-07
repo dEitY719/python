@@ -3412,17 +3412,17 @@ ValueError: too many values to unpack (expected 3)
 # [18-1-1] 사용자 함수
 ############################################################
 
-a = 10
+# a = 10
 
-def f1() : print(1)
-def f2() : print(a + 1)
-def f3(x, y) : print(max(x, y))
-def f4(x, y) : return x + y
+# def f1() : print(1)
+# def f2() : print(a + 1)
+# def f3(x, y) : print(max(x, y))
+# def f4(x, y) : return x + y
 
-f1()
-f2()
-f3(5, 10)
-print(f4(5, 10))
+# f1()
+# f2()
+# f3(5, 10)
+# print(f4(5, 10))
 
 ############################################################
 # [18-1-2] Lambda 식으로 이름없는 함수 만들기
@@ -3443,14 +3443,14 @@ print(f4(5, 10))
 # [18-2] Lambda 함수 동작 분석
 ############################################################
 
-##def sqr(x) :
-##    return x ** 2
-##
-##y = map(sqr, [1,3,4,7])
-##print(*y)
-##
-##z = map(lambda x : x ** 2, [1,3,4,7])
-##print(*z)
+def sqr(x) :
+   return x ** 2
+
+y = map(sqr, [1,3,4,7])
+print(*y)
+
+z = map(lambda x : x ** 2, [1,3,4,7])
+print(*z)
 
 ############################################################
 # [18-3] tuple로 리턴되는 함수를 lambda 식으로 설계

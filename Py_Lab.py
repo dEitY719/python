@@ -2931,24 +2931,25 @@ ValueError: too many values to unpack (expected 3)
 # [15-2] Default pPK Parameter(pPKd) 1
 ############################################################
 
-def func(a, b, c = 300, d = 400): 	    #pPK, pPK, pPKd, pPKd
-   print('%d, %d, %d, %d' %(a, b, c, d))
+# def func(a, b, c = 300, d = 400): 	    #pPK, pPK, pPKd, pPKd
+#    print('%d, %d, %d, %d' %(a, b, c, d))
 
-func(10, 20)                              #aP, aP, (aKd), (aKd)
-func(10, 20, 30)                          #aP, aP, aP, (aKd)
-func(a = 10, b = 20)                      #aK, aK, (aKd), (aKd)
-func(a = 10, b = 20, c = 30, d = 40)      #aK, aK, aK, aK
-func(a = 10, b = 20, d = 40)              #aK, aK, (aKd), aK
-func(10, 20, d = 40)                      #aP, aP, (aKd), aK
+# func(10, 20)                              #aP, aP, (aKd), (aKd)
+# func(10, 20, 30)                          #aP, aP, aP, (aKd)
+# func(a = 10, b = 20)                      #aK, aK, (aKd), (aKd)
+# func(a = 10, b = 20, c = 30, d = 40)      #aK, aK, aK, aK
+# func(a = 10, b = 20, d = 40)              #aK, aK, (aKd), aK
+# func(10, 20, d = 40)                      #aP, aP, (aKd), aK
 
 ############################################################
 # [15-3] Default pPK Parameter(pPKd) 2
 ############################################################
 
-##def func(a, b = 200, c): 		  #pPK, pPKd, pPK
-##    print('%d, %d, %d' %(a, b, c))
-##
-##func(10, 20, 30)         		  #aP, aP, aP
+def func(a, b = 200, c): 		  #pPK, pPKd, pPK
+   print('%d, %d, %d' %(a, b, c))
+
+func(10, 20, 30)         		  #aP, aP, aP
+# SyntaxError: non-default argument follows default argument
 
 ############################################################
 # [15-4] Keyword Only Parameter(pK, pKd) 1

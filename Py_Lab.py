@@ -3219,37 +3219,37 @@ ValueError: too many values to unpack (expected 3)
 # [17-3] 짝수, 홀수 판단 함수
 ############################################################
 
-def func(a):
-	# 코드 작성
-    print("Even" if a % 2 == 0 else "Odd")
+# def func(a):
+# 	# 코드 작성
+#     print("Even" if a % 2 == 0 else "Odd")
 
-func(10)
-func(11)
-func(-10)
-func(-11)
+# func(10)
+# func(11)
+# func(-10)
+# func(-11)
 
 ############################################################
 # [17-4] 비교 연산
 ############################################################
 
-##a = 10
-##b = 10
-##print(a == b, a != b, a < b, a > b, a <= b, a >= b)
-##
-##a = 'kim'
-##b = 'kim'
-##c = 'kj'
-##print(a == b, a != b, a < c, a > c, a <= b, a >= b)
-##
-##a = [1,2,3]
-##b = range(1, 4)
-##c = map(int, '1234')
-##print(3 in a, 2 not in a, 3 in b, 1 in c)
-##
-##a = [1,2,3]
-##b = a
-##b[2] = 30
-##print(a is b, a is not b, a[1] is b[1], a[2] is b[2])
+a = 10
+b = 10
+print(a == b, a != b, a < b, a > b, a <= b, a >= b)
+
+a = 'kim'
+b = 'kim'
+c = 'kj'
+print(a == b, a != b, a < c, a > c, a <= b, a >= b)
+
+a = [1,2,3]
+b = range(1, 4)
+c = map(int, '1234')
+print(3 in a, 2 not in a, 3 in b, 1 in c)
+
+a = [1,2,3]
+b = a
+b[2] = 30
+print(a is b, a is not b, a[1] is b[1], a[2] is b[2])
 
 ############################################################
 # [17-5] 우리 반 학생인가?

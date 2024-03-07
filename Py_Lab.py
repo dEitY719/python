@@ -2436,11 +2436,11 @@ ValueError: too many values to unpack (expected 3)
 ############################################################
 
 def func1(a) :
-   print('func1', a)
+   print('func1', a, sep=' ..>.. ')
 
 def func2(a, b) :
    c = a + b
-   print('func2', a, b, c)
+   print('func2', a, b, c, sep=' ..>>.. ')
 
 func1(10)
 func1('kim')
@@ -2448,6 +2448,14 @@ func1('kim')
 func2(30, 40)
 func2('kim', 'lew')
 func2([1,2,3], [4,5,6])
+
+l = [1,2,3]
+l1 = l.append([4,5,6]) # append's return is None
+print(l, l1)
+l.extend([4,5,6])
+l2 = l
+print('extend >> ', l2)
+
 func2('kim', 10)
 # TypeError: can only concatenate str (not "int") to str
 

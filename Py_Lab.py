@@ -2605,30 +2605,31 @@ ValueError: too many values to unpack (expected 3)
 # [14-10-1] 함수의 변수 사용 1
 ############################################################
 
-cnt = 0
+# cnt = 0
 
-def func() :
-    cnt += 1
-# UnboundLocalError: local variable 'cnt' referenced before assignment
+# def func() :
+#     cnt += 1
+# # UnboundLocalError: local variable 'cnt' referenced before assignment
 
-func()
-func()
+# func()
+# func()
 
-print(cnt)
+# print(cnt)
 
 ############################################################
 # [14-10-2] 함수의 변수 사용 2
 ############################################################
 
-##a = 1
-##
-##def func() :
-##    b = a
-##    a = 0
-##    print(b)
-##
-##func()
-##print(a)
+a = 1
+
+def func() :
+   b = a
+#    UnboundLocalError: local variable 'a' referenced before assignment     
+   a = 0
+   print(b)
+
+func()
+print(a)
 
 ############################################################
 # [14-11] global 키워드

@@ -3232,35 +3232,36 @@ ValueError: too many values to unpack (expected 3)
 # [17-4] 비교 연산
 ############################################################
 
-a = 10
-b = 10
-print(a == b, a != b, a < b, a > b, a <= b, a >= b)
+# a = 10
+# b = 10
+# print(a == b, a != b, a < b, a > b, a <= b, a >= b)
 
-a = 'kim'
-b = 'kim'
-c = 'kj'
-print(a == b, a != b, a < c, a > c, a <= b, a >= b)
+# a = 'kim'
+# b = 'kim'
+# c = 'kj'
+# print(a == b, a != b, a < c, a > c, a <= b, a >= b)
 
-a = [1,2,3]
-b = range(1, 4)
-c = map(int, '1234')
-print(3 in a, 2 not in a, 3 in b, 1 in c)
+# a = [1,2,3]
+# b = range(1, 4)
+# c = map(int, '1234')
+# print(3 in a, 2 not in a, 3 in b, 1 in c)
 
-a = [1,2,3]
-b = a
-b[2] = 30
-print(a is b, a is not b, a[1] is b[1], a[2] is b[2])
+# a = [1,2,3]
+# b = a
+# b[2] = 30
+# print(a is b, a is not b, a[1] is b[1], a[2] is b[2])
 
 ############################################################
 # [17-5] 우리 반 학생인가?
 ############################################################
 
-##def student_check(t, s) :
-##    # 코드 작성
-##
-##t = ('kim', 'lee', 'park', 'kang', 'song', 'lew', 'moon')
-##s = input()
-##print(student_check(t, s))
+def student_check(t, s) :
+   # 코드 작성
+    return 'YES' if s in t else 'NO'
+
+t = ('kim', 'lee', 'park', 'kang', 'song', 'lew', 'moon')
+s = input()
+print(student_check(t, s))
 
 ############################################################
 # [17-6] 나는 몇 조인가?

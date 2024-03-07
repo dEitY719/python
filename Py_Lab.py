@@ -3210,22 +3210,23 @@ ValueError: too many values to unpack (expected 3)
 # [17-2] 조건식과 참 조건
 ############################################################
 
-print( "T" if -1 else "F")
-print( "T" if '0' else "F")
-print( "T" if (0,) else "F")
-print( "T" if [1] else "F")
+# print( "T" if -1 else "F")
+# print( "T" if '0' else "F")
+# print( "T" if (0,) else "F")
+# print( "T" if [1] else "F")
 
 ############################################################
 # [17-3] 짝수, 홀수 판단 함수
 ############################################################
 
-##def func(a):
-##	# 코드 작성
-##
-##func(10)
-##func(11)
-##func(-10)
-##func(-11)
+def func(a):
+	# 코드 작성
+    print("Even" if a % 2 == 0 else "Odd")
+
+func(10)
+func(11)
+func(-10)
+func(-11)
 
 ############################################################
 # [17-4] 비교 연산

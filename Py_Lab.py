@@ -3702,6 +3702,18 @@ ValueError: too many values to unpack (expected 3)
 # sqrValues = list(map(lambda x : x**2, iValues))
 # print(*sqrValues)
 
+# # Teacher's solution1
+# m = map(float, input().split())
+# m2 = map(round, m)
+# print(*map(lambda x : x**2, m2))
+
+# # # Teacher's solution2
+# def myFunc(a) : return round(float(a)) ** 2
+# print(*map(myFunc, input().split()))
+
+# # Teacher's solution3
+print(*map(lambda x:round(float(x)) ** 2, input().split()))
+
 
 ############################################################
 # [18-17] ‘a’로 시작하는 단어의 앞 글자를 ‘*’로 변환하기
@@ -3709,12 +3721,12 @@ ValueError: too many values to unpack (expected 3)
 # output > *pple *nd * *aa *!
 ############################################################
 
-argv = input().split()
+# argv = input().split()
 
-aStrings = list(filter(lambda x : x[0] == 'a', argv))
-# print(*aStrings)
-convertStrings = list(map(lambda x : '*' + x[1:], aStrings))
-print(*convertStrings)
+# aStrings = list(filter(lambda x : x[0] == 'a', argv))
+# # print(*aStrings)
+# convertStrings = list(map(lambda x : '*' + x[1:], aStrings))
+# print(*convertStrings)
 
 ############################################################
 # [18-18] 24bpp RGB 이미지 추출 함수 개선

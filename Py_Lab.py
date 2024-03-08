@@ -3544,30 +3544,30 @@ ValueError: too many values to unpack (expected 3)
 # [18-6-2] min, max 함수의 비교 대상 지정
 ############################################################
 
-def func(x) :
-   print(x, x[1])
-   return x[1]
+# def func(x) :
+#    print(x, x[1])
+#    return x[1]
 
-t = ((10, 'kim'),(21, 'choi'),(8, 'song'))
+# t = ((10, 'kim'),(21, 'choi'),(8, 'song'))
 
-print('min #1 =', min(t))
-print('min #2 =', min(t, key = func))
-print('min #3 =', min(t, key = lambda x: x[1]))
+# print('min #1 =', min(t))
+# print('min #2 =', min(t, key = func))
+# print('min #3 =', min(t, key = lambda x: x[1]))
 
 
 ############################################################
 # [18-7] min, max 함수의 비교 대상 지정
 ############################################################
 
-##def comp1(x) : return x[0]
-##def comp2(x) : return x[1]
-##def comp3(x) : return x[1], x[2]
-##
-##t = (('banana', 500, 'yellow'), ('apple', 600, 'red'), ('kiwi', 500, 'brown'))
-##
-##print( min(t, key = comp1), max(t, key = comp1) )
-##print( min(t, key = comp2), max(t, key = comp2) )
-##print( min(t, key = comp3), max(t, key = comp3) )
+def comp1(x) : return x[0]
+def comp2(x) : return x[1]
+def comp3(x) : return x[1], x[2]
+
+t = (('banana', 500, 'yellow'), ('apple', 600, 'red'), ('kiwi', 500, 'brown'))
+
+print( min(t, key = comp1), max(t, key = comp1) )
+print( min(t, key = comp2), max(t, key = comp2) )
+print( min(t, key = comp3), max(t, key = comp3) )
 
 ############################################################
 # [18-8] key로 전달하는 함수를 lambda로 구현

@@ -3411,13 +3411,13 @@ ValueError: too many values to unpack (expected 3)
 ############################################################
 # [3746] B3: PY2 [17-8] 3의 배수 또는 7의 배수 판단
 ############################################################
-argv = int(input())
-# if( argv%3 == 0 or argv%7 == 0):
-#     print('YES')
-# else:
-#     print('NO')
+# argv = int(input())
+# # if( argv%3 == 0 or argv%7 == 0):
+# #     print('YES')
+# # else:
+# #     print('NO')
 
-print('YES' if ( argv%3 == 0 or argv%7 == 0)  else 'NO' )
+# print('YES' if ( argv%3 == 0 or argv%7 == 0)  else 'NO' )
 
 ############################################################
 # [4179] B7: PY0 [LAB] ZERO or PASS
@@ -3426,6 +3426,14 @@ print('YES' if ( argv%3 == 0 or argv%7 == 0)  else 'NO' )
 # argv = map(int, input().split())
 # existTrue = any(argv)
 # print('PASS' if (existTrue) else 'ZERO')
+
+
+############################################################
+# [3744] B1: PY2 [17-6] 나는 몇 조인가?
+#############################################################
+# argv = map(int, input().split())
+# m, n = *list(argv)
+# TODO
 
 ############################################################
 # [18-1-1] 사용자 함수
@@ -3475,14 +3483,14 @@ print('YES' if ( argv%3 == 0 or argv%7 == 0)  else 'NO' )
 # [18-3] tuple로 리턴되는 함수를 lambda 식으로 설계
 ############################################################
 
-##def func(a, b) : return a+b, a-b, a*b, a/b
-##
-##print( func(3,4) )
-##
-##f1 = lambda a, b : (a+b, a-b, a*b, a/b)
-##f2 = lambda a, b : [a+b, a-b, a*b, a/b]
-##print( f1(3, 4) )
-##print( f2(3, 4) )
+def func(a, b) : return a+b, a-b, a*b, a/b
+
+print( func(3,4) )
+
+f1 = lambda a, b : (a+b, a-b, a*b, a/b)
+f2 = lambda a, b : [a+b, a-b, a*b, a/b]
+print( f1(3, 4) )
+print( f2(3, 4) )
 
 ############################################################
 # [18-4] Lambda 식으로 함수 재설계

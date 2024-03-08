@@ -3573,26 +3573,29 @@ ValueError: too many values to unpack (expected 3)
 # [18-8] key로 전달하는 함수를 lambda로 구현
 ############################################################
 
-## def comp1(x) : return x[0]
-## def comp2(x) : return x[1]
-## def comp3(x) : return x[1], x[2]
+# ## def comp1(x) : return x[0]
+# ## def comp2(x) : return x[1]
+# ## def comp3(x) : return x[1], x[2]
 
-t = (('banana', 500, 'yellow'), ('apple', 600, 'red'), ('kiwi', 500, 'brown'))
+# t = (('banana', 500, 'yellow'), ('apple', 600, 'red'), ('kiwi', 500, 'brown'))
 
-print( min(t, key = lambda x : x[0]) ) # key = comp1 기능
-print( min(t, key = lambda x : x[1]) ) # key = comp2 기능
-print( min(t, key = lambda x : (x[1], x[2])) ) # key = comp3 기능
+# print( min(t, key = lambda x : x[0]) ) # key = comp1 기능
+# print( min(t, key = lambda x : x[1]) ) # key = comp2 기능
+# print( min(t, key = lambda x : (x[1], x[2])) ) # key = comp3 기능
 
 ############################################################
 # [18-9] dict에서 최대, 최소값 찾기
 ############################################################
 
-##d = {'apple':1500, 'orange':500, 'banana':100, 'kiwi':700}
-##
-##min_item = min(d.items())
-##max_item = max(d.items())
-##
-##print('min =', min_item, 'max =', max_item)
+d = {'apple':1500, 'orange':500, 'banana':100, 'kiwi':700}
+
+min_item = min(d)
+print('min =', min_item) # key를 기준으로...
+
+min_item = min(d.items())
+max_item = max(d.items())
+
+print('min =', min_item, 'max =', max_item)
 
 ############################################################
 # [18-10] dict에서 가격을 기준으로 최대, 최소값 찾기

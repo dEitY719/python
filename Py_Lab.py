@@ -3514,31 +3514,31 @@ ValueError: too many values to unpack (expected 3)
 # [18-5] Lambda 함수와 Call-Back
 ############################################################
 
-def add(a, b) : return a + b
-def sub(a, b) : return a - b
-def mul(a, b) : return a * b
-def div(a, b) : return a / b
+# def add(a, b) : return a + b
+# def sub(a, b) : return a - b
+# def mul(a, b) : return a * b
+# def div(a, b) : return a / b
 
-def func(f, x, y) : return f(x, y)
+# def func(f, x, y) : return f(x, y)
 
-print(func(add, 10, 3))
-print(func(sub, 10, 3))
-print(func(mul, 10, 3))
-print(func(div, 10, 3))
+# print(func(add, 10, 3))
+# print(func(sub, 10, 3))
+# print(func(mul, 10, 3))
+# print(func(div, 10, 3))
 
-print(func(lambda a, b : a + b, 10, 3))
-print(func(lambda a, b : a - b, 10, 3))
-print(func(lambda a, b : a * b, 10, 3))
-print(func(lambda a, b : a / b, 10, 3))
+# print(func(lambda a, b : a + b, 10, 3))
+# print(func(lambda a, b : a - b, 10, 3))
+# print(func(lambda a, b : a * b, 10, 3))
+# print(func(lambda a, b : a / b, 10, 3))
 
 ############################################################
 # [18-6-1] 다중 container의 대소 비교
 ############################################################
 
-##t = (('banana', 500, 'yellow'), ('apple', 600, 'red'), ('kiwi', 500, 'brown'))
-##
-##min_item = min(t)
-##print('min =', min_item)
+t = (('banana', 500, 'yellow'), ('apple', 600, 'red'), ('kiwi', 500, 'brown'))
+
+min_item = min(t)
+print('min =', min_item)
 
 ############################################################
 # [18-6-2] min, max 함수의 비교 대상 지정

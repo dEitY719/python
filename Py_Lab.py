@@ -3872,31 +3872,33 @@ ValueError: too many values to unpack (expected 3)
 # [19-9] Filter가 사용된 다수의 생성식 사용 구조
 ############################################################
 
-m = ( (1,2,3,4), (4,), (6,7), (9,8,0), (10, 11, 12) )
-r = ( (y, x) for y in range(0, len(m)) if len(m[y])>2 for x in m[y] if not x%2 )
+# m = ( (1,2,3,4), (4,), (6,7), (9,8,0), (10, 11, 12) )
+# r = ( (y, x) for y in range(0, len(m)) if len(m[y])>2 for x in m[y] if not x%2 )
 
-print(*r)
+# print(*r)
 
 ############################################################
 # [19-10] Comprehension Expression
 ############################################################
 
-##l1 = [x for x in range(5)]
-##print(type(l1), l1)
-##
-##l2 = [(x for x in range(5))]
-##print(type(l2), l2)
-##
-##s = {x * x for x in [1, 2, 3, 3, 4]}
-##print(type(s), s)
-##
-##t = (('a', 90), ('b', 80), ('c', 95))
-##
-##d1 = { x[0] : x[1] for x in t if x[1] > 85 }
-##print(type(d1), d1)
-##
-##d2 = { k : v for k, v in t if v > 85 }
-##print(d2)
+l1 = [x for x in range(5)]
+print(type(l1), l1)
+
+l2 = [(x for x in range(5))]
+print(type(l2), l2)
+# <class 'list'> [<generator object <genexpr> at 0x0000021C3BC08C10>]
+
+s = {x * x for x in [1, 2, 3, 3, 4]}
+print(type(s), s)
+
+t = (('a', 90), ('b', 80), ('c', 95))
+
+d1 = { x[0] : x[1] for x in t if x[1] > 85 }
+print(type(d1), d1)
+
+d2 = { k : v for k, v in t if v > 85 }
+# unpacking k, v = (x, y)
+print(type(d2), d2)
 
 ############################################################
 # [19-11-1] 귤 판매 => lambda와 filter 함수 활용

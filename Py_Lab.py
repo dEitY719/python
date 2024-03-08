@@ -4368,12 +4368,12 @@ ValueError: too many values to unpack (expected 3)
 # [22-4] 이름 위치 모두 찾기
 ############################################################
 
-t = ('kim','lee','park','kim','song','lee')
+# t = ('kim','lee','park','kim','song','lee')
 
-# 코드 작성
-s = input()
-for i in range(len(t)) :
-   if t[i] == s : print(i)
+# # 코드 작성
+# s = input()
+# for i in range(len(t)) :
+#    if t[i] == s : print(i)
 
 ############################################################
 # [22-5] 귤 판매 시즌2
@@ -4396,16 +4396,19 @@ for i in range(len(t)) :
 ##print(len(l))
 ##print(*l)
 
-### [3] 이 코드를 for문으로 재설계하라
-##
-##n = int(input())
-##x = map(int, input().split())
-##box = []
-##
-### 코드 작성
-##
-##print(len(box))
-##print(*box)
+# [3] 이 코드를 for문으로 재설계하라
+
+n = int(input())
+x = list(map(int, input().split()))
+box = []
+
+# 코드 작성
+for i in range(n) :
+   if x[i] >= 10 :
+       box.append(x[i])
+
+print(len(box))
+print(*box)
 
 ############################################################
 # [22-6] 이중 for 루프

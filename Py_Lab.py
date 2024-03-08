@@ -3835,21 +3835,21 @@ ValueError: too many values to unpack (expected 3)
 # [19-5] 2개의 생성식이 사용된 Generator
 ############################################################
 
-s1, s2 = 'abc', '1234'
+# s1, s2 = 'abc', '1234'
 
-r = (x + y for x in s1 for y in s2)
+# r = (x + y for x in s1 for y in s2)
 
-print(*r)
+# print(*r)
 
 ############################################################
 # [19-6] 2차원 튜플을 1차원으로 변환
 ############################################################
 
-##m = ((11,2,33,4),(5,6),(90,10,11,12))
-##r = tuple(y for x in m for y in x)
-##
-##print(r)
-##print(min(r), max(r), sum(r))
+m = ((11,2,33,4),(5,6),(90,10,11,12))
+r = tuple(y for x in m for y in x)
+
+print(r)
+print(min(r), max(r), sum(r))
 
 ############################################################
 # [19-7] Iterable을 생성하는 Generator

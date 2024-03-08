@@ -3845,21 +3845,21 @@ ValueError: too many values to unpack (expected 3)
 # [19-6] 2차원 튜플을 1차원으로 변환
 ############################################################
 
-m = ((11,2,33,4),(5,6),(90,10,11,12))
-r = tuple(y for x in m for y in x)
+# m = ((11,2,33,4),(5,6),(90,10,11,12))
+# r = tuple(y for x in m for y in x)
 
-print(r)
-print(min(r), max(r), sum(r))
+# print(r)
+# print(min(r), max(r), sum(r))
 
 ############################################################
 # [19-7] Iterable을 생성하는 Generator
 ############################################################
 
-##a = ([x, y, x * y] for x in range(2, 10) for y in range(1, 10))
-##print(*a, sep = '\n')
-##
-##b = ((x, y, x * y) for x in range(2, 10) for y in range(1, 10))
-##print(*b, sep = '\n')
+a = ([x, y, x * y] for x in range(2, 10) for y in range(1, 10))
+print(*a, sep = '\n')
+
+b = ((x, y, x * y) for x in range(2, 10) for y in range(1, 10))
+print(*b, sep = '\n')
 
 ############################################################
 # [19-8] 2단 ~ 9단까지 구구단 인쇄

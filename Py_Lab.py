@@ -3535,23 +3535,25 @@ ValueError: too many values to unpack (expected 3)
 # [18-6-1] 다중 container의 대소 비교
 ############################################################
 
-t = (('banana', 500, 'yellow'), ('apple', 600, 'red'), ('kiwi', 500, 'brown'))
+# t = (('banana', 500, 'yellow'), ('apple', 600, 'red'), ('kiwi', 500, 'brown'))
 
-min_item = min(t)
-print('min =', min_item)
+# min_item = min(t)
+# print('min =', min_item)
 
 ############################################################
 # [18-6-2] min, max 함수의 비교 대상 지정
 ############################################################
 
-##def func(x) :
-##    print(x, x[1])
-##    return x[1]
-##
-##t = ((10, 'kim'),(21, 'choi'),(8, 'song'))
-##
-##print('min #1 =', min(t))
-##print('min #2 =', min(t, key = func))
+def func(x) :
+   print(x, x[1])
+   return x[1]
+
+t = ((10, 'kim'),(21, 'choi'),(8, 'song'))
+
+print('min #1 =', min(t))
+print('min #2 =', min(t, key = func))
+print('min #3 =', min(t, key = lambda x: x[1]))
+
 
 ############################################################
 # [18-7] min, max 함수의 비교 대상 지정

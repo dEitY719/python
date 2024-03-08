@@ -3679,8 +3679,10 @@ ValueError: too many values to unpack (expected 3)
 # [18-15] 길이가 3 이상인 문자열들만 선별하기
 # input >> I am a python programmer too
 ############################################################
+# def func1(a) : return len(a) >= 3
 
 l = input().split()
+# x = filter(func1, l)
 x = filter(lambda x:len(x)>2, l)
 
 print(*x)

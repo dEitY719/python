@@ -3669,24 +3669,36 @@ ValueError: too many values to unpack (expected 3)
 # [18-14] filter 함수 활용 연습 => lambda로 변경
 ############################################################
 
-x = (1,2,3,6,8,9,10,24,19,21,30,41,50,90)
+# x = (1,2,3,6,8,9,10,24,19,21,30,41,50,90)
 
-y = tuple(filter(lambda a : a % 3 == 0, x))
+# y = tuple(filter(lambda a : a % 3 == 0, x))
 
-print(y)
+# print(y)
 
 ############################################################
 # [18-15] 길이가 3 이상인 문자열들만 선별하기
+# input >> I am a python programmer too
 ############################################################
 
-##x = # 코드 작성
-##
-##print(*x)
+l = input().split()
+x = filter(lambda x:len(x)>2, l)
+
+print(*x)
 
 ############################################################
 # [18-16] 모든 실수 값들을 정수화(round)후 제곱하기
+# input >> 12.3 3.4 -5.18 4 -20.1
 ############################################################
 
+# argv = map(float, input().split())
+# print(*argv)
+
+# iValues = list(map(round, *argv))
+# print(*iValues)
+
+# sqrtValues = list(map(lambda x : x**2, iValues))
+
+# print(*sqrtValues)
 
 
 

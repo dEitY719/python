@@ -4131,17 +4131,17 @@ ValueError: too many values to unpack (expected 3)
 # [20-4] Generator 함수 분석
 ############################################################
 
-def mygen():
-   yield 1
-   yield 2
-   yield 3
+# def mygen():
+#    yield 1
+#    yield 2
+#    yield 3
 
-x = mygen()
+# x = mygen()
 
-print(next(x))
-print(next(x))
-print(next(x))
-# print(next(x)) # StopIteration
+# print(next(x))
+# print(next(x))
+# print(next(x))
+# # print(next(x)) # StopIteration
 
 ############################################################
 # [20-5] Generator 함수의 이해
@@ -4250,11 +4250,11 @@ print(next(x))
 # [21-4-1] 비워둔 들여쓰기
 ############################################################
 
-##if True :
-##    print('[1]')
-##else:
-##
-##print('[2]')
+if True :
+   print('[1]')
+else:
+
+print('[2]') # IndentationError: expected an indented block
 
 ############################################################
 # [21-4-2] 비워둔 들여쓰기

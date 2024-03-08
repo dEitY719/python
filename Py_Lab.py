@@ -3691,8 +3691,8 @@ ValueError: too many values to unpack (expected 3)
 # [18-16] 모든 실수 값들을 정수화(round)후 제곱하기
 # input >> 12.3 3.4 -5.18 4 -20.1
 ############################################################
-
-# # argv = input().split()
+# my solution
+# argv = input().split()
 # fValues = list(map(float, input().split()))
 # # print(*fValues)
 
@@ -3712,7 +3712,7 @@ ValueError: too many values to unpack (expected 3)
 # print(*map(myFunc, input().split()))
 
 # # Teacher's solution3
-print(*map(lambda x:round(float(x)) ** 2, input().split()))
+# print(*map(lambda x:round(float(x)) ** 2, input().split()))
 
 
 ############################################################
@@ -3721,12 +3721,12 @@ print(*map(lambda x:round(float(x)) ** 2, input().split()))
 # output > *pple *nd * *aa *!
 ############################################################
 
-# argv = input().split()
+argv = input().split()
 
-# aStrings = list(filter(lambda x : x[0] == 'a', argv))
-# # print(*aStrings)
-# convertStrings = list(map(lambda x : '*' + x[1:], aStrings))
-# print(*convertStrings)
+aStrings = filter(lambda x : x[0] == 'a', argv)
+# print(*aStrings)
+convertStrings = map(lambda x : '*' + x[1:], aStrings)
+print(*convertStrings)
 
 ############################################################
 # [18-18] 24bpp RGB 이미지 추출 함수 개선

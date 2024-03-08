@@ -3431,17 +3431,17 @@ ValueError: too many values to unpack (expected 3)
 ############################################################
 # [3744] B1: PY2 [17-6] 나는 몇 조인가?
 #############################################################
-m, n = input().split()
-m, n = int(m), int(n)
+# m, n = input().split()
+# m, n = int(m), int(n)
 
-def func(m, n):   
-   return 'YES' if m % 10 == n else 'NO'
+# def func(m, n):   
+#    return 'YES' if m % 10 == n else 'NO'
 
-if( 0 <= n <=9 ):
-   print(func(m, n))
-else:
-   print("FAULT")
-   exit()
+# if( 0 <= n <=9 ):
+#    print(func(m, n))
+# else:
+#    print("FAULT")
+#    exit()
 
 ############################################################
 # [18-1-1] 사용자 함수
@@ -3514,22 +3514,22 @@ else:
 # [18-5] Lambda 함수와 Call-Back
 ############################################################
 
-##def add(a, b) : return a + b
-##def sub(a, b) : return a - b
-##def mul(a, b) : return a * b
-##def div(a, b) : return a / b
-##
-##def func(f, x, y) : return f(x, y)
-##
-##print(func(add, 10, 3))
-##print(func(sub, 10, 3))
-##print(func(mul, 10, 3))
-##print(func(div, 10, 3))
-##
-##print(func(lambda a, b : a + b, 10, 3))
-##print(func(lambda a, b : a - b, 10, 3))
-##print(func(lambda a, b : a * b, 10, 3))
-##print(func(lambda a, b : a / b, 10, 3))
+def add(a, b) : return a + b
+def sub(a, b) : return a - b
+def mul(a, b) : return a * b
+def div(a, b) : return a / b
+
+def func(f, x, y) : return f(x, y)
+
+print(func(add, 10, 3))
+print(func(sub, 10, 3))
+print(func(mul, 10, 3))
+print(func(div, 10, 3))
+
+print(func(lambda a, b : a + b, 10, 3))
+print(func(lambda a, b : a - b, 10, 3))
+print(func(lambda a, b : a * b, 10, 3))
+print(func(lambda a, b : a / b, 10, 3))
 
 ############################################################
 # [18-6-1] 다중 container의 대소 비교

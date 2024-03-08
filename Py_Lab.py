@@ -3679,29 +3679,28 @@ ValueError: too many values to unpack (expected 3)
 # [18-15] 길이가 3 이상인 문자열들만 선별하기
 # input >> I am a python programmer too
 ############################################################
-# def func1(a) : return len(a) >= 3
+# # def func1(a) : return len(a) >= 3
 
-l = input().split()
-# x = filter(func1, l)
-x = filter(lambda x:len(x)>2, l)
+# l = input().split()
+# # x = filter(func1, l)
+# x = filter(lambda x:len(x)>2, l)
 
-print(*x)
+# print(*x)
 
 ############################################################
 # [18-16] 모든 실수 값들을 정수화(round)후 제곱하기
 # input >> 12.3 3.4 -5.18 4 -20.1
 ############################################################
 
-# argv = map(float, input().split())
-# print(*argv)
+argv = input().split()
+fValues = list(map(float, argv))
+# print(*fValues)
 
-# iValues = list(map(round, *argv))
+iValues = list(map(round, fValues))
 # print(*iValues)
 
-# sqrtValues = list(map(lambda x : x**2, iValues))
-
-# print(*sqrtValues)
-
+sqrValues = list(map(lambda x : x**2, iValues))
+print(*sqrValues)
 
 
 ############################################################

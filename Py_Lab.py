@@ -3827,19 +3827,19 @@ ValueError: too many values to unpack (expected 3)
 # input >> apple  and love a will aaa a! xxx
 ############################################################
 
-y = ('*' +  x[1:] for x in input().split() if x[0] == 'a')
+# y = ('*' +  x[1:] for x in input().split() if x[0] == 'a')
 
-print(*y)
+# print(*y)
 
 ############################################################
 # [19-5] 2개의 생성식이 사용된 Generator
 ############################################################
 
-##s1, s2 = 'abc', '1234'
-##
-##r = (x + y for x in s1 for y in s2)
-##
-##print(*r)
+s1, s2 = 'abc', '1234'
+
+r = (x + y for x in s1 for y in s2)
+
+print(*r)
 
 ############################################################
 # [19-6] 2차원 튜플을 1차원으로 변환

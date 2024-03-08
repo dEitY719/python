@@ -3855,18 +3855,18 @@ ValueError: too many values to unpack (expected 3)
 # [19-7] Iterable을 생성하는 Generator
 ############################################################
 
-a = ([x, y, x * y] for x in range(2, 10) for y in range(1, 10))
-print(*a, sep = '\n')
+# a = ([x, y, x * y] for x in range(2, 10) for y in range(1, 10))
+# print(*a, sep = '\n')
 
-b = ((x, y, x * y) for x in range(2, 10) for y in range(1, 10))
-print(*b, sep = '\n')
+# b = ((x, y, x * y) for x in range(2, 10) for y in range(1, 10))
+# print(*b, sep = '\n')
 
 ############################################################
 # [19-8] 2단 ~ 9단까지 구구단 인쇄
 ############################################################
 
-##r = ('{} * {} = {}'.format(x,y,x*y) for x in range(2,10) for y in range(1,10))
-##print(*r, sep = '\n')
+r = ('{} * {} = {}'.format(x,y,x*y) for x in range(2,10) for y in range(1,10))
+print(*r, sep = '\n')
 
 ############################################################
 # [19-9] Filter가 사용된 다수의 생성식 사용 구조

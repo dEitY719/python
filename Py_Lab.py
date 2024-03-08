@@ -3619,27 +3619,27 @@ ValueError: too many values to unpack (expected 3)
 # [18-11] sorted 함수의 정렬 기준 전달
 ############################################################
 
-x = [('apple','red',500),('kiwi','brown',300),('banana','yellow',300)]
+# x = [('apple','red',500),('kiwi','brown',300),('banana','yellow',300)]
 
-y1 = sorted(x, key = lambda a : a[0], reverse = True)
-y2 = sorted(x, key = lambda a : a[1])
-y3 = sorted(x, key = lambda a : a[2])
-y4 = sorted(x, key = lambda a : (a[2], a[0]))
+# y1 = sorted(x, key = lambda a : a[0], reverse = True)
+# y2 = sorted(x, key = lambda a : a[1])
+# y3 = sorted(x, key = lambda a : a[2])
+# y4 = sorted(x, key = lambda a : (a[2], a[0]))
 
-print(x, y1, y2, y3, y4, sep = '\n')
+# print(x, y1, y2, y3, y4, sep = '\n')
 
 ############################################################
 # [18-12] dict의 sorted 함수 적용을 위한 key 설정
 ############################################################
 
-##l = [{'name':'kim', 'id':4}, {'name':'song', 'id':2}, {'name':'lee', 'id':1}, {'name':'yun', 'id':3}]
-##
-##y0 = sorted(l)
-##
-##y1 = sorted(l, key = lambda a: a['name'])
-##y2 = sorted(l, key = lambda a: a['id'])
-##
-##print(l, y1, y2, sep = '\n')
+l = [{'name':'kim', 'id':4}, {'name':'song', 'id':2}, {'name':'lee', 'id':1}, {'name':'yun', 'id':3}]
+
+# y0 = sorted(l) # TypeError: '<' not supported between instances of 'dict' and 'dict'
+
+y1 = sorted(l, key = lambda a: a['name'])
+y2 = sorted(l, key = lambda a: a['id'])
+
+print(l, y1, y2, sep = '\n')
 
 ############################################################
 # [18-13] filter 함수 이해

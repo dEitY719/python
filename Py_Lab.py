@@ -3692,23 +3692,29 @@ ValueError: too many values to unpack (expected 3)
 # input >> 12.3 3.4 -5.18 4 -20.1
 ############################################################
 
-argv = input().split()
-fValues = list(map(float, argv))
-# print(*fValues)
+# # argv = input().split()
+# fValues = list(map(float, input().split()))
+# # print(*fValues)
 
-iValues = list(map(round, fValues))
-# print(*iValues)
+# iValues = list(map(round, fValues))
+# # print(*iValues)
 
-sqrValues = list(map(lambda x : x**2, iValues))
-print(*sqrValues)
+# sqrValues = list(map(lambda x : x**2, iValues))
+# print(*sqrValues)
 
 
 ############################################################
 # [18-17] ‘a’로 시작하는 단어의 앞 글자를 ‘*’로 변환하기
+# input >> apple  and love a will aaa a! xxx
+# output > *pple *nd * *aa *!
 ############################################################
 
+argv = input().split()
 
-
+aStrings = list(filter(lambda x : x[0] == 'a', argv))
+# print(*aStrings)
+convertStrings = list(map(lambda x : '*' + x[1:], aStrings))
+print(*convertStrings)
 
 ############################################################
 # [18-18] 24bpp RGB 이미지 추출 함수 개선

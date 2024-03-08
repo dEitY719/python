@@ -3756,34 +3756,36 @@ ValueError: too many values to unpack (expected 3)
 ##
 ##print("0x%x 0x%x 0x%x" % (ar, ag, ab))
 
-image = (0x1D, 0x13, 0x25, 0x13, 0x27, 0x45, 0x08, 0xAB, 0x3F)
+# image = (0x1D, 0x13, 0x25, 0x13, 0x27, 0x45, 0x08, 0xAB, 0x3F)
  
-r, g, b = map((lambda x: image[x::3]), range(0,3))
-ar, ag, ab = map((lambda x: round(sum(x)/len(x))), (r, g, b))
+# r, g, b = map((lambda x: image[x::3]), range(0,3))
+# ar, ag, ab = map((lambda x: round(sum(x)/len(x))), (r, g, b))
  
-#ar, ag, ab = map((lambda x: round(sum(x)/len(x))), map((lambda x: image[x::3]), range(0,3)))
+# #ar, ag, ab = map((lambda x: round(sum(x)/len(x))), map((lambda x: image[x::3]), range(0,3)))
  
-print("0x%x 0x%x 0x%x" % (ar, ag, ab))
+# print("0x%x 0x%x 0x%x" % (ar, ag, ab))
 
 ############################################################
 # [19-1] Generator Expression
 ############################################################
 
-##t = (1,-3,7,-2,8)
-##
-##a = (x for x in t)
-##print(type(a))
-##print(*a)
-##print(*a)
-##
-##b = (x * x for x in t)
-##print(*b)
-##
-##c = (abs(x) for x in t)
-##print(*c)
-##
-##d = (print(x) for x in t)
-##print(*d)
+t = (1,-3,7,-2,8)
+
+a = (x for x in t)
+print(type(a))
+print(*a)
+print(*a) # due to 소진, empty line
+
+b = (x * x for x in t)
+print(*b)
+
+c = (abs(x) for x in t)
+print(*c)
+
+d = (print(x) for x in t)
+print(*d) # due to print()'s return is None
+# None None None None None
+
 
 ############################################################
 # [19-2] Generator 식에 filter 기능 추가

@@ -3632,34 +3632,38 @@ ValueError: too many values to unpack (expected 3)
 # [18-12] dict의 sorted 함수 적용을 위한 key 설정
 ############################################################
 
-l = [{'name':'kim', 'id':4}, {'name':'song', 'id':2}, {'name':'lee', 'id':1}, {'name':'yun', 'id':3}]
+# l = [{'name':'kim', 'id':4}, {'name':'song', 'id':2}, {'name':'lee', 'id':1}, {'name':'yun', 'id':3}]
 
-# y0 = sorted(l) # TypeError: '<' not supported between instances of 'dict' and 'dict'
+# # y0 = sorted(l) # TypeError: '<' not supported between instances of 'dict' and 'dict'
 
-y1 = sorted(l, key = lambda a: a['name'])
-y2 = sorted(l, key = lambda a: a['id'])
+# y1 = sorted(l, key = lambda a: a['name'])
+# y2 = sorted(l, key = lambda a: a['id'])
 
-print(l, y1, y2, sep = '\n')
+# print(l, y1, y2, sep = '\n')
 
 ############################################################
 # [18-13] filter 함수 이해
 ############################################################
 
-##def func1(a) : return True
-##def func2(a) : return False
-##def func3(a) : return not a % 3
-##
-##x = (1,2,3,6,8,9,10,24,19,21,30,41,50,90)
-##f1 = filter(func1, x)
-##f2 = filter(func2, x)
-##y = tuple(filter(func3, x))
-##z = tuple(filter(None, [1,0,None,{},'0',(),[],[0],'',-1]))
-##
-##print(type(f1))
-##print(*f1)
-##print(*f2)
-##print(y)
-##print(z)
+def func1(a) : return True
+def func2(a) : return False
+def func3(a) : return not a % 3
+
+x = (1,2,3,6,8,9,10,24,19,21,30,41,50,90)
+f1 = filter(func1, x)
+f2 = filter(func2, x)
+y = tuple(filter(func3, x))
+z = tuple(filter(None, [1,0,None,{},'0',(),[],[0],'',-1]))
+# z1 = tuple(filter([1,0,None,{},'0',(),[],[0],'',-1]))
+# # TypeError: filter expected 2 arguments, got 1
+
+print(type(f1))
+print(*f1)
+print(*f2)
+print(y)
+print(z)
+# print(z1)
+
 
 ############################################################
 # [18-14] filter 함수 활용 연습 => lambda로 변경

@@ -4106,42 +4106,42 @@ ValueError: too many values to unpack (expected 3)
 # [20-3] Iterator의 분석
 ############################################################
 
-g = (x for x in range(1,5))
-# print('[1]', g[0]) # TypeError: 'generator' object is not subscriptable
-print('[2]', next(g))
-print('[3]', next(g))
-print('[4]', *g)
+# g = (x for x in range(1,5))
+# # print('[1]', g[0]) # TypeError: 'generator' object is not subscriptable
+# print('[2]', next(g))
+# print('[3]', next(g))
+# print('[4]', *g)
 
-m = map(int, '12')
-print('[5]', next(m))
-print('[6]', next(m))
-# print('[7]', next(m)) # StopIteration
-print('[8]', next(m, 100))
-print('[9]', next(m, 'Empty'))
+# m = map(int, '12')
+# print('[5]', next(m))
+# print('[6]', next(m))
+# # print('[7]', next(m)) # StopIteration
+# print('[8]', next(m, 100))
+# print('[9]', next(m, 'Empty'))
 
-t = (1,2)
-print('[10]', t[0])
-# print('[11]', next(t)) # TypeError: 'tuple' object is not an iterator
+# t = (1,2)
+# print('[10]', t[0])
+# # print('[11]', next(t)) # TypeError: 'tuple' object is not an iterator
 
-r = range(1,3)
-print('[12]', r[0])
-# print('[13]', next(r)) # TypeError: 'range' object is not an iterator
+# r = range(1,3)
+# print('[12]', r[0])
+# # print('[13]', next(r)) # TypeError: 'range' object is not an iterator
 
 ############################################################
 # [20-4] Generator 함수 분석
 ############################################################
 
-##def mygen():
-##    yield 1
-##    yield 2
-##    yield 3
-##
-##x = mygen()
-##
-##print(next(x))
-##print(next(x))
-##print(next(x))
-##print(next(x))
+def mygen():
+   yield 1
+   yield 2
+   yield 3
+
+x = mygen()
+
+print(next(x))
+print(next(x))
+print(next(x))
+# print(next(x)) # StopIteration
 
 ############################################################
 # [20-5] Generator 함수의 이해

@@ -3769,38 +3769,38 @@ ValueError: too many values to unpack (expected 3)
 # [19-1] Generator Expression
 ############################################################
 
-t = (1,-3,7,-2,8)
+# t = (1,-3,7,-2,8)
 
-a = (x for x in t)
-print(type(a))
-print(*a)
-print(*a) # due to 소진, empty line
+# a = (x for x in t)
+# print(type(a))
+# print(*a)
+# print(*a) # due to 소진, empty line
 
-b = (x * x for x in t)
-print(*b)
+# b = (x * x for x in t)
+# print(*b)
 
-c = (abs(x) for x in t)
-print(*c)
+# c = (abs(x) for x in t)
+# print(*c)
 
-d = (print(x) for x in t)
-print(*d) # due to print()'s return is None
-# None None None None None
+# d = (print(x) for x in t)
+# print(*d) # due to print()'s return is None
+# # None None None None None
 
 
 ############################################################
 # [19-2] Generator 식에 filter 기능 추가
 ############################################################
 
-##t = (1,-3,7,-2,8,9)
-##
-##a = (x for x in t if x > 0)
-##print(*a)
-##
-##b = (x * x for x in t if x > 0 and x % 3)
-##print(*b)
-##
-##c = (x * x for x in t if x > 0 and x % 3)
-##print(*c)
+t = (1,-3,7,-2,8,9)
+
+a = (x for x in t if x > 0)
+print(*a)
+
+b = (x * x for x in t if x > 0 and x % 3)
+print(*b)
+
+c = (x * x for x in t if x > 0 if x % 3)
+print(*c)
 
 ############################################################
 # [19-3-1] 모든 값을 제곱하여 list에 저장하기 => lambda와 map 활용

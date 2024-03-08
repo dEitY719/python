@@ -4260,21 +4260,21 @@ ValueError: too many values to unpack (expected 3)
 # [21-4-2] 비워둔 들여쓰기
 ############################################################
 
-def func():
+# def func():
 
-print("[1]") # IndentationError: expected an indented block
-print(func())
+# print("[1]") # IndentationError: expected an indented block
+# print(func())
 
 ############################################################
 # [21-5-1] pass문 사용
 ############################################################
 
-##if True :
-##    print('[1]')
-##else:
-##    pass
-##
-##print('[2]')
+if True :
+   print('[1]')
+else:
+   pass
+
+print('[2]')
 
 ############################################################
 # [21-5-2] pass문 사용

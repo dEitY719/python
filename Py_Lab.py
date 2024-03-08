@@ -3431,9 +3431,17 @@ ValueError: too many values to unpack (expected 3)
 ############################################################
 # [3744] B1: PY2 [17-6] 나는 몇 조인가?
 #############################################################
-# argv = map(int, input().split())
-# m, n = *list(argv)
-# TODO
+m, n = input().split()
+m, n = int(m), int(n)
+
+def func(m, n):   
+   return 'YES' if m % 10 == n else 'NO'
+
+if( 0 <= n <=9 ):
+   print(func(m, n))
+else:
+   print("FAULT")
+   exit()
 
 ############################################################
 # [18-1-1] 사용자 함수
@@ -3496,11 +3504,11 @@ ValueError: too many values to unpack (expected 3)
 # [18-4] Lambda 식으로 함수 재설계
 ############################################################
 
-n = int(input())
+# n = int(input())
 
-f = lambda x : 'EVEN' if not x % 2 else 'ODD'
+# f = lambda x : 'EVEN' if not x % 2 else 'ODD'
 
-print(f(n))
+# print(f(n))
 
 ############################################################
 # [18-5] Lambda 함수와 Call-Back

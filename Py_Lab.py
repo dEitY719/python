@@ -3905,30 +3905,30 @@ ValueError: too many values to unpack (expected 3)
 # input >> 8 10 25 4 30
 ############################################################
 
-# n = int(input())
+n = int(input())
 
-# # 여기서 n은 이후 사용되지 않음
-# # 두 번째줄의 값 들만 입력 받아서 사용하면 됨
-# argv = map(int, input().split())
+# 여기서 n은 이후 사용되지 않음
+# 두 번째줄의 값 들만 입력 받아서 사용하면 됨
+argv = map(int, input().split())
 
-# orange = tuple(filter(lambda x : x >= 10, argv))
-# print(len(orange))
-# print(*orange)
+orange = tuple(filter(lambda x : x >= 10, argv))
+print(len(orange))
+print(*orange)
 
 ############################################################
 # [19-11-2] 귤 판매 => list comprehension 활용
 ############################################################
 
-n = int(input())
-##
-### 여기서 n은 이후 사용되지 않음
-### 두 번째줄의 값 들만 입력 받아서 사용하면 됨
-##
-### 코드 작성
-argv = map(int, input().split())
-orange = [x for x in argv if x >= 10]
-print(len(orange))
-print(*orange)
+# n = int(input())
+# ##
+# ### 여기서 n은 이후 사용되지 않음
+# ### 두 번째줄의 값 들만 입력 받아서 사용하면 됨
+# ##
+# ### 코드 작성
+# argv = map(int, input().split())
+# orange = [x for x in argv if x >= 10]
+# print(len(orange))
+# print(*orange)
 
 ############################################################
 # [19-12] 선별된 귤을 모두 2배하기

@@ -3791,26 +3791,26 @@ ValueError: too many values to unpack (expected 3)
 # [19-2] Generator 식에 filter 기능 추가
 ############################################################
 
-t = (1,-3,7,-2,8,9)
+# t = (1,-3,7,-2,8,9)
 
-a = (x for x in t if x > 0)
-print(*a)
+# a = (x for x in t if x > 0)
+# print(*a)
 
-b = (x * x for x in t if x > 0 and x % 3)
-print(*b)
+# b = (x * x for x in t if x > 0 and x % 3)
+# print(*b)
 
-c = (x * x for x in t if x > 0 if x % 3)
-print(*c)
+# c = (x * x for x in t if x > 0 if x % 3)
+# print(*c)
 
 ############################################################
 # [19-3-1] 모든 값을 제곱하여 list에 저장하기 => lambda와 map 활용
 ############################################################
 
-##t = (1, 3, 7, 2, 6, 8)
-##
-##l = # 코드 작성
-##
-##print(l)
+t = (1, 3, 7, 2, 6, 8)
+
+l = list(map(lambda x : x * x, t))
+
+print(l)
 
 ############################################################
 # [19-3-2] 모든 값을 제곱하여 list에 저장하기 => generator expression 활용

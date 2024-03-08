@@ -3865,17 +3865,17 @@ ValueError: too many values to unpack (expected 3)
 # [19-8] 2단 ~ 9단까지 구구단 인쇄
 ############################################################
 
-r = ('{} * {} = {}'.format(x,y,x*y) for x in range(2,10) for y in range(1,10))
-print(*r, sep = '\n')
+# r = ('{} * {} = {}'.format(x,y,x*y) for x in range(2,10) for y in range(1,10))
+# print(*r, sep = '\n')
 
 ############################################################
 # [19-9] Filter가 사용된 다수의 생성식 사용 구조
 ############################################################
 
-##m = ( (1,2,3,4), (4,), (6,7), (9,8,0), (10, 11, 12) )
-##r = ( (y, x) for y in range(0, len(m)) if len(m[y])>2 for x in m[y] if not x%2 )
-##
-##print(*r)
+m = ( (1,2,3,4), (4,), (6,7), (9,8,0), (10, 11, 12) )
+r = ( (y, x) for y in range(0, len(m)) if len(m[y])>2 for x in m[y] if not x%2 )
+
+print(*r)
 
 ############################################################
 # [19-10] Comprehension Expression

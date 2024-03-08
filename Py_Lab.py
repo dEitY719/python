@@ -3732,7 +3732,7 @@ ValueError: too many values to unpack (expected 3)
 # def f(a) : return a[0] == 'a'
 # def func(a) : return '*'+a[1:]
 # print(*map(func, filter(f, input().split())))
-print(*map(lambda a : '*' + a[1:], filter(lambda a : a[0] == 'a', input().split())))
+# print(*map(lambda a : '*' + a[1:], filter(lambda a : a[0] == 'a', input().split())))
 
 ############################################################
 # [18-18] 24bpp RGB 이미지 추출 함수 개선
@@ -3755,6 +3755,15 @@ print(*map(lambda a : '*' + a[1:], filter(lambda a : a[0] == 'a', input().split(
 ### 코드 작성
 ##
 ##print("0x%x 0x%x 0x%x" % (ar, ag, ab))
+
+image = (0x1D, 0x13, 0x25, 0x13, 0x27, 0x45, 0x08, 0xAB, 0x3F)
+ 
+r, g, b = map((lambda x: image[x::3]), range(0,3))
+ar, ag, ab = map((lambda x: round(sum(x)/len(x))), (r, g, b))
+ 
+#ar, ag, ab = map((lambda x: round(sum(x)/len(x))), map((lambda x: image[x::3]), range(0,3)))
+ 
+print("0x%x 0x%x 0x%x" % (ar, ag, ab))
 
 ############################################################
 # [19-1] Generator Expression

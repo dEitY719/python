@@ -3587,25 +3587,31 @@ ValueError: too many values to unpack (expected 3)
 # [18-9] dict에서 최대, 최소값 찾기
 ############################################################
 
-d = {'apple':1500, 'orange':500, 'banana':100, 'kiwi':700}
+# d = {'apple':1500, 'orange':500, 'banana':100, 'kiwi':700}
 
-min_item = min(d)
-print('min =', min_item) # key를 기준으로...
+# min_item = min(d)
+# print('min =', min_item) # key를 기준으로...
 
-min_item = min(d.items())
-max_item = max(d.items())
+# min_item = min(d.items())
+# max_item = max(d.items())
 
-print('min =', min_item, 'max =', max_item)
+# print('min =', min_item, 'max =', max_item)
 
 ############################################################
 # [18-10] dict에서 가격을 기준으로 최대, 최소값 찾기
 ############################################################
 
-##d = {'apple':1500, 'orange':500, 'banana':100, 'kiwi':700}
-##
-### 코드 작성
-##
-##print('min =', min_item, 'max =', max_item)
+d = {'apple':1500, 'orange':500, 'banana':100, 'kiwi':700}
+
+# 코드 작성
+# min_item = min(d.values())
+# max_item = max(d.values())
+# result >> min = 100 max = 1500
+
+min_item = min(d.items(), key=lambda x : x[1])
+max_item = max(d.items(), key=lambda x : x[1])
+
+print('min =', min_item, 'max =', max_item)
 
 ############################################################
 # [18-11] sorted 함수의 정렬 기준 전달

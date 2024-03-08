@@ -3483,24 +3483,24 @@ ValueError: too many values to unpack (expected 3)
 # [18-3] tuple로 리턴되는 함수를 lambda 식으로 설계
 ############################################################
 
-def func(a, b) : return a+b, a-b, a*b, a/b
+# def func(a, b) : return a+b, a-b, a*b, a/b
 
-print( func(3,4) )
+# print( func(3,4) )
 
-f1 = lambda a, b : (a+b, a-b, a*b, a/b)
-f2 = lambda a, b : [a+b, a-b, a*b, a/b]
-print( f1(3, 4) )
-print( f2(3, 4) )
+# f1 = lambda a, b : (a+b, a-b, a*b, a/b)
+# f2 = lambda a, b : [a+b, a-b, a*b, a/b]
+# print( f1(3, 4) )
+# print( f2(3, 4) )
 
 ############################################################
 # [18-4] Lambda 식으로 함수 재설계
 ############################################################
 
-##n = int(input())
-##
-##f = # 코드 설계
-##
-##print(f(n))
+n = int(input())
+
+f = lambda x : 'EVEN' if not x % 2 else 'ODD'
+
+print(f(n))
 
 ############################################################
 # [18-5] Lambda 함수와 Call-Back

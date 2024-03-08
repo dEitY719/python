@@ -4026,36 +4026,36 @@ ValueError: too many values to unpack (expected 3)
 # [19-19] 방식별 속도 비교
 ############################################################
 
-import datetime
-nItems = 100000000
-def f1(x) : return x * x
-def f2(x) : return not x % 2
+# import datetime
+# nItems = 100000000
+# def f1(x) : return x * x
+# def f2(x) : return not x % 2
 
-s = datetime.datetime.now()
-a = filter(f2, range(nItems))
-b = print(sum(map(f1, a)))
-e = datetime.datetime.now()
-print(e - s)
+# s = datetime.datetime.now()
+# a = filter(f2, range(nItems))
+# b = print(sum(map(f1, a)))
+# e = datetime.datetime.now()
+# print(e - s)
 
-s = datetime.datetime.now()
-print(sum(map(f1, filter(f2, range(nItems)))))
-e = datetime.datetime.now()
-print(e - s)
+# s = datetime.datetime.now()
+# print(sum(map(f1, filter(f2, range(nItems)))))
+# e = datetime.datetime.now()
+# print(e - s)
 
-s = datetime.datetime.now()
-print(sum(map(lambda x : x * x, filter(lambda x : not x % 2, range(nItems)))))
-e = datetime.datetime.now()
-print(e - s)
+# s = datetime.datetime.now()
+# print(sum(map(lambda x : x * x, filter(lambda x : not x % 2, range(nItems)))))
+# e = datetime.datetime.now()
+# print(e - s)
 
-s = datetime.datetime.now()
-print(sum([x * x for x in range(nItems) if not x  % 2]))
-e = datetime.datetime.now()
-print(e - s)
+# s = datetime.datetime.now()
+# print(sum([x * x for x in range(nItems) if not x  % 2]))
+# e = datetime.datetime.now()
+# print(e - s)
 
-s = datetime.datetime.now()
-print(sum((x * x for x in range(nItems) if not x  % 2)))
-e = datetime.datetime.now()
-print(e - s)
+# s = datetime.datetime.now()
+# print(sum((x * x for x in range(nItems) if not x  % 2)))
+# e = datetime.datetime.now()
+# print(e - s)
 
 ############################################################
 # [20-1] Iterable 타입의 아이템들 인쇄
@@ -4096,11 +4096,11 @@ print(e - s)
 # [20-2] Iterator의 개념
 ############################################################
 
-##x = map(int, [3.14, -5.25, -128])
-##y = map(abs, x)
-##
-##print('[1]', *x)
-##print('[2]', *y)
+x = map(int, [3.14, -5.25, -128])
+y = map(abs, x)
+
+print('[1]', *x)
+print('[2]', *y)
 
 ############################################################
 # [20-3] Iterator의 분석

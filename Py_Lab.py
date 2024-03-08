@@ -3600,33 +3600,33 @@ ValueError: too many values to unpack (expected 3)
 ############################################################
 # [18-10] dict에서 가격을 기준으로 최대, 최소값 찾기
 ############################################################
-# def comp(x) : return x[0]
-# ('apple',1500) 의 형태로 전달이 되니까, x[0], x[1] 형태임
+# # def comp(x) : return x[0]
+# # ('apple',1500) 의 형태로 전달이 되니까, x[0], x[1] 형태임
 
-d = {'apple':1500, 'orange':500, 'banana':100, 'kiwi':700}
+# d = {'apple':1500, 'orange':500, 'banana':100, 'kiwi':700}
 
-# 코드 작성
-# min_item = min(d.values())
-# max_item = max(d.values())
-# result >> min = 100 max = 1500
+# # 코드 작성
+# # min_item = min(d.values())
+# # max_item = max(d.values())
+# # result >> min = 100 max = 1500
 
-min_item = min(d.items(), key=lambda x : x[1])
-max_item = max(d.items(), key=lambda x : x[1])
+# min_item = min(d.items(), key=lambda x : x[1])
+# max_item = max(d.items(), key=lambda x : x[1])
 
-print('min =', min_item, 'max =', max_item)
+# print('min =', min_item, 'max =', max_item)
 
 ############################################################
 # [18-11] sorted 함수의 정렬 기준 전달
 ############################################################
 
-##x = [('apple','red',500),('kiwi','brown',300),('banana','yellow',300)]
-##
-##y1 = sorted(x, key = lambda a : a[0], reverse = True)
-##y2 = sorted(x, key = lambda a : a[1])
-##y3 = sorted(x, key = lambda a : a[2])
-##y4 = sorted(x, key = lambda a : (a[2], a[0]))
-##
-##print(x, y1, y2, y3, y4, sep = '\n')
+x = [('apple','red',500),('kiwi','brown',300),('banana','yellow',300)]
+
+y1 = sorted(x, key = lambda a : a[0], reverse = True)
+y2 = sorted(x, key = lambda a : a[1])
+y3 = sorted(x, key = lambda a : a[2])
+y4 = sorted(x, key = lambda a : (a[2], a[0]))
+
+print(x, y1, y2, y3, y4, sep = '\n')
 
 ############################################################
 # [18-12] dict의 sorted 함수 적용을 위한 key 설정

@@ -3721,12 +3721,18 @@ ValueError: too many values to unpack (expected 3)
 # output > *pple *nd * *aa *!
 ############################################################
 
-argv = input().split()
+# argv = input().split()
 
-aStrings = filter(lambda x : x[0] == 'a', argv)
-# print(*aStrings)
-convertStrings = map(lambda x : '*' + x[1:], aStrings)
-print(*convertStrings)
+# aStrings = filter(lambda x : x[0] == 'a', argv)
+# # print(*aStrings)
+# convertStrings = map(lambda x : '*' + x[1:], aStrings)
+# print(*convertStrings)
+
+# Teacher's solution
+# def f(a) : return a[0] == 'a'
+# def func(a) : return '*'+a[1:]
+# print(*map(func, filter(f, input().split())))
+print(*map(lambda a : '*' + a[1:], filter(lambda a : a[0] == 'a', input().split())))
 
 ############################################################
 # [18-18] 24bpp RGB 이미지 추출 함수 개선

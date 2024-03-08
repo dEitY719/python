@@ -3881,46 +3881,54 @@ ValueError: too many values to unpack (expected 3)
 # [19-10] Comprehension Expression
 ############################################################
 
-l1 = [x for x in range(5)]
-print(type(l1), l1)
+# l1 = [x for x in range(5)]
+# print(type(l1), l1)
 
-l2 = [(x for x in range(5))]
-print(type(l2), l2)
-# <class 'list'> [<generator object <genexpr> at 0x0000021C3BC08C10>]
+# l2 = [(x for x in range(5))]
+# print(type(l2), l2)
+# # <class 'list'> [<generator object <genexpr> at 0x0000021C3BC08C10>]
 
-s = {x * x for x in [1, 2, 3, 3, 4]}
-print(type(s), s)
+# s = {x * x for x in [1, 2, 3, 3, 4]}
+# print(type(s), s)
 
-t = (('a', 90), ('b', 80), ('c', 95))
+# t = (('a', 90), ('b', 80), ('c', 95))
 
-d1 = { x[0] : x[1] for x in t if x[1] > 85 }
-print(type(d1), d1)
+# d1 = { x[0] : x[1] for x in t if x[1] > 85 }
+# print(type(d1), d1)
 
-d2 = { k : v for k, v in t if v > 85 }
-# unpacking k, v = (x, y)
-print(type(d2), d2)
+# d2 = { k : v for k, v in t if v > 85 }
+# # unpacking k, v = (x, y)
+# print(type(d2), d2)
 
 ############################################################
 # [19-11-1] 귤 판매 => lambda와 filter 함수 활용
+# input >> 8 10 25 4 30
 ############################################################
 
-##n = int(input())
-##
-### 여기서 n은 이후 사용되지 않음
-### 두 번째줄의 값 들만 입력 받아서 사용하면 됨
-##
-### 코드 작성
+# n = int(input())
+
+# # 여기서 n은 이후 사용되지 않음
+# # 두 번째줄의 값 들만 입력 받아서 사용하면 됨
+# argv = map(int, input().split())
+
+# orange = tuple(filter(lambda x : x >= 10, argv))
+# print(len(orange))
+# print(*orange)
 
 ############################################################
 # [19-11-2] 귤 판매 => list comprehension 활용
 ############################################################
 
-##n = int(input())
+n = int(input())
 ##
 ### 여기서 n은 이후 사용되지 않음
 ### 두 번째줄의 값 들만 입력 받아서 사용하면 됨
 ##
 ### 코드 작성
+argv = map(int, input().split())
+orange = [x for x in argv if x >= 10]
+print(len(orange))
+print(*orange)
 
 ############################################################
 # [19-12] 선별된 귤을 모두 2배하기

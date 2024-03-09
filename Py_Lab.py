@@ -5609,34 +5609,67 @@ ValueError: too many values to unpack (expected 3)
 # %%thon
 # %%werful
 
+# argv = input().split()
+# numChr = int(input())
+# replaceChr = input()
+
+# l = list(filter(lambda x: len(x)>=numChr, argv ))
+# # print(*l)
+
+# l = l[:10] # 10개의 item
+
+# def replaceFunc(s, replaceChr) :
+#     replaceStr = replaceChr + s[len(replaceChr):]
+#    #  print(replaceStr)
+#     return replaceStr
+
+# # for x in l:
+# #     print(replaceFunc(x, replaceChr))
+
+# rl = [replaceFunc(x, replaceChr) for x in l]
+# rl.sort()
+# print(*rl, sep='\n')
+
+############################################################
+# [7429] J3: [python test] 닮은꼴 문자열은 몇 개?
+# input >>
+# abc abcdef accdef ab axcged abxx abfsdr ancdf
+# ab
+# output >>
+# 5
+############################################################
 argv = input().split()
-numChr = int(input())
-replaceChr = input()
+comStr = input()
 
-l = list(filter(lambda x: len(x)>=numChr, argv ))
-# print(*l)
+# for x in argv:
+#     if comStr in x:
+#         print('= same ... ' + comStr, x)
+#     else:
+#         print('! diff ... ' + comStr, x)
 
-l = l[:10] # 10개의 item
-
-def replaceFunc(s, replaceChr) :
-    replaceStr = replaceChr + s[len(replaceChr):]
-   #  print(replaceStr)
-    return replaceStr
-
-# for x in l:
-#     print(replaceFunc(x, replaceChr))
-
-rl = [replaceFunc(x, replaceChr) for x in l]
-rl.sort()
-print(*rl, sep='\n')
+# fl = list(filter(lambda x:comStr in x, argv))
+fl = [x for x in argv if comStr in x ]
+print(len(fl))
 
 ############################################################
-# 
+# [7430] J4: [python test] 성적표 정렬
+# input >>
+# 4
+# park 45 60
+# lee 9 100
+# bae 45 60
+# lew 45 50
+############################################################
+# n = int(input())
+# print(type(n), n)
 
-############################################################
-# 
-############################################################
-# 
+# l = []
+# for i in range(n):
+#     argv = input().split()
+#     t = (argv[0], int(argv[1]), int(argv[2]))
+#     print(t)
+#     l.append(t)
+#     print(l)
 
 ############################################################
 # 

@@ -5545,17 +5545,17 @@ ValueError: too many values to unpack (expected 3)
 # [7425] I9: [python test] 친구의 나이는?
 # input >> kim 30 lee 50 park 33
 ############################################################
-argv = input().split()
-name = input()
+# argv = input().split()
+# name = input()
 
-# lName = [x for x in argv if x%2==0]
-# lAge = [x for x in argv if x%2==1]
-# dTag = {k:v for k, v in lName, lAge}
-# print(*dTag)
-lName = argv[::2]
-lAge = argv[1::2]
-dTag = dict(zip(lName, lAge))
-print(dTag[name])
+# # lName = [x for x in argv if x%2==0]
+# # lAge = [x for x in argv if x%2==1]
+# # dTag = {k:v for k, v in lName, lAge}
+# # print(*dTag)
+# lName = argv[::2]
+# lAge = argv[1::2]
+# dTag = dict(zip(lName, lAge))
+# print(dTag[name])
 
 ############################################################
 # [7426] J0: [python test] 등수 확인
@@ -5565,16 +5565,33 @@ print(dTag[name])
 # output >>
 # 7
 ############################################################
-# argv = list(map(int, input().split()))
-# score = int(input())
+argv = list(map(int, input().split())) # 주어진 리스트
+score = int(input()) # 삽입할 값
 
-# argv.sort(reverse=True)
+argv.sort(reverse=True)
 # print(*argv)
 
+def find_index(argv, score) :
+    for i in range(len(argv)) :
+        if argv[i] <= score :
+            break
+    return i
+
+# 함수 호출
+idx = find_index(argv, score)
+# print(*argv)
+print(idx+1)
+# print(argv.index(score))
+
 ############################################################
 # 
 ############################################################
 # 
+
+
+
+
+
 
 ############################################################
 # 

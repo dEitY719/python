@@ -5565,30 +5565,36 @@ ValueError: too many values to unpack (expected 3)
 # output >>
 # 7
 ############################################################
-argv = list(map(int, input().split())) # 주어진 리스트
-score = int(input()) # 삽입할 값
+# argv = list(map(int, input().split())) # 주어진 리스트
+# score = int(input()) # 삽입할 값
 
-argv.sort(reverse=True)
-# print(*argv)
+# argv.sort(reverse=True)
+# # print(*argv)
 
-def find_index(argv, score) :
-    for i in range(len(argv)) :
-        if argv[i] <= score :
-            break
-    return i
+# def find_index(argv, score) :
+#     for i in range(len(argv)) :
+#         if argv[i] <= score :
+#             break
+#     return i
 
-# 함수 호출
-idx = find_index(argv, score)
-# print(*argv)
-print(idx+1)
-# print(argv.index(score))
+# # 함수 호출
+# idx = find_index(argv, score)
+# # print(*argv)
+# print(idx+1)
+# # print(argv.index(score))
 
 ############################################################
-# 
+# [7427] J1: [python test] 회문 찾기
+# input >> abcba
 ############################################################
 # 
 
+def func(s) :
+  # 코드 작성
+   reversedS = s[::-1]
+   return 'YES' if s == reversedS else 'NO'
 
+print(func(input()))
 
 
 

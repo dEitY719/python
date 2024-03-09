@@ -5663,18 +5663,33 @@ bae 45 60
 lew 45 50
 '''
 ############################################################
-n = int(input())
+# n = int(input())
 
-l = []
-for i in range(n):
-    argv = input().split()
-    t = (argv[0], int(argv[1]), int(argv[2]))
-    l.append(t)
+# l = []
+# for i in range(n):
+#     argv = input().split()
+#     t = (argv[0], int(argv[1]), int(argv[2]))
+#     l.append(t)
 
-sl = sorted(l, key = lambda x : (x[1], x[2]))
-for x in sl:
-    print(*x)
+# sl = sorted(l, key = lambda x : (x[1], x[2]))
+# for x in sl:
+#     print(*x)
 
 ############################################################
 # [7431] J5: [python test] 불량품 제거
+''' input
+1 8 9 0 -2 90 80 123 972
+0 2 5 6
+'''
+# output >> sum( except 불량품 ) 1101
 ############################################################
+total_list = list(map(int, input().split()))
+abnormal_idx = list(map(int, input().split()))
+# print(total_list, abnormal_idx, sep='\n')
+
+for x in abnormal_idx:
+    total_list[x] = 'X'
+
+# print(total_list)
+normal_list = list(filter(lambda x:isinstance(x,int), total_list))
+print(sum(normal_list))

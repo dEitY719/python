@@ -5548,16 +5548,28 @@ ValueError: too many values to unpack (expected 3)
 argv = input().split()
 name = input()
 
-lName = [x for x in argv if x%2==0]
-lAge = [x for x in argv if x%2==1]
-
-dTag = {k:v for k, v in lName, lAge}
-print(*dTag)
+# lName = [x for x in argv if x%2==0]
+# lAge = [x for x in argv if x%2==1]
+# dTag = {k:v for k, v in lName, lAge}
+# print(*dTag)
+lName = argv[::2]
+lAge = argv[1::2]
+dTag = dict(zip(lName, lAge))
+print(dTag[name])
 
 ############################################################
-# 
+# [7426] J0: [python test] 등수 확인
+# input >>
+# 80 20 50 40 20 18 79 100 56 20 30 20
+# 30
+# output >>
+# 7
 ############################################################
-# 
+# argv = list(map(int, input().split()))
+# score = int(input())
+
+# argv.sort(reverse=True)
+# print(*argv)
 
 ############################################################
 # 

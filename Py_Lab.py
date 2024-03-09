@@ -5587,20 +5587,49 @@ ValueError: too many values to unpack (expected 3)
 # [7427] J1: [python test] 회문 찾기
 # input >> abcba
 ############################################################
-# 
 
-def func(s) :
-  # 코드 작성
-   reversedS = s[::-1]
-   return 'YES' if s == reversedS else 'NO'
+# def func(s) :
+#   # 코드 작성
+#    reversedS = s[::-1]
+#    return 'YES' if s == reversedS else 'NO'
 
-print(func(input()))
-
-
+# print(func(input()))
 
 
 ############################################################
-# 
+# [7428] J2: [python test] 선별적 변경
+# input >>
+# Python is an easy to learn powerful programming language
+# 5
+# %%
+# output >>
+# %%arn
+# %%nguage
+# %%ogramming
+# %%thon
+# %%werful
+
+argv = input().split()
+numChr = int(input())
+replaceChr = input()
+
+l = list(filter(lambda x: len(x)>=numChr, argv ))
+# print(*l)
+
+l = l[:10] # 10개의 item
+
+def replaceFunc(s, replaceChr) :
+    replaceStr = replaceChr + s[len(replaceChr):]
+   #  print(replaceStr)
+    return replaceStr
+
+# for x in l:
+#     print(replaceFunc(x, replaceChr))
+
+rl = [replaceFunc(x, replaceChr) for x in l]
+rl.sort()
+print(*rl, sep='\n')
+
 ############################################################
 # 
 

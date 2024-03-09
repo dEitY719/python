@@ -5638,45 +5638,43 @@ ValueError: too many values to unpack (expected 3)
 # output >>
 # 5
 ############################################################
-argv = input().split()
-comStr = input()
+# argv = input().split()
+# comStr = input()
 
-# for x in argv:
-#     if comStr in x:
-#         print('= same ... ' + comStr, x)
-#     else:
-#         print('! diff ... ' + comStr, x)
+# # for x in argv:
+# #     if comStr in x:
+# #         print('= same ... ' + comStr, x)
+# #     else:
+# #         print('! diff ... ' + comStr, x)
 
-# fl = list(filter(lambda x:comStr in x, argv))
-fl = [x for x in argv if comStr in x ]
-print(len(fl))
+# # fl = list(filter(lambda x:comStr in x, argv))
+# fl = [x for x in argv if comStr in x ]
+# print(len(fl))
 
 ############################################################
 # [7430] J4: [python test] 성적표 정렬
-# input >>
-# 4
-# park 45 60
-# lee 9 100
-# bae 45 60
-# lew 45 50
+# ref. [18-11] sorted 함수의 정렬 기준 전달
+# input >> students (name, kor, eng)
+'''
+4
+park 45 60
+lee 9 100
+bae 45 60
+lew 45 50
+'''
 ############################################################
-# n = int(input())
-# print(type(n), n)
+n = int(input())
 
-# l = []
-# for i in range(n):
-#     argv = input().split()
-#     t = (argv[0], int(argv[1]), int(argv[2]))
-#     print(t)
-#     l.append(t)
-#     print(l)
+l = []
+for i in range(n):
+    argv = input().split()
+    t = (argv[0], int(argv[1]), int(argv[2]))
+    l.append(t)
+
+sl = sorted(l, key = lambda x : (x[1], x[2]))
+for x in sl:
+    print(*x)
 
 ############################################################
-# 
+# [7431] J5: [python test] 불량품 제거
 ############################################################
-# 
-
-############################################################
-# 
-############################################################
-# 
